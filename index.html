@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Himanshu Rana — B2B SaaS Product Manager</title>
+<meta name="description" content="Product manager, 5+ years across 0→1 B2B platforms, AI products and growth. Seven cases, seven numbers, each with the method behind it.">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://himanshurana.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://himanshurana.pages.dev/">
+<meta property="og:title" content="Himanshu Rana — B2B SaaS Product Manager">
+<meta property="og:description" content="I ship products that move a number, not features that fill a roadmap.">
+<meta property="og:image" content="https://himanshurana.pages.dev/assets/portrait.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-iol.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+</head>
+<body>
+
+<title>Himanshu Rana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ══════════════════════════════════════════════
+   TOKENS — jade + amber on near-black
+   ══════════════════════════════════════════════ */
+:root{
+  --bg:#070A0C; --bg-2:#0A0E11;
+  --card:rgba(255,255,255,.034); --card-2:rgba(255,255,255,.056);
+  --line:rgba(255,255,255,.085); --line-2:rgba(255,255,255,.17);
+  --fg:#F4F7F9; --fg-2:#AFB6BD; --muted:#79828A; --dim:#525A61;
+  --cyan:#4FD1FF; --cyan-2:#8CE2FF; --cyan-dim:rgba(79,209,255,.14); --ink:#04222C;
+  --acc:var(--cyan);
+  --grad:var(--cyan);
+  --r:18px; --r-s:12px;
+  --sans:"Helvetica Neue","Inter Tight",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+  --pad:clamp(20px,5vw,80px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:rgba(79,209,255,.28);color:#04222C}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img{max-width:100%;display:block}
+
+/* ── aurora field ── */
+.aur{position:fixed;inset:-25%;z-index:0;pointer-events:none;filter:blur(96px);opacity:.5}
+.aur i{position:absolute;display:block;border-radius:50%;mix-blend-mode:screen}
+.aur i:nth-child(1){width:46vw;height:46vw;left:-6%;top:1%;background:#4FD1FF;opacity:.55;animation:d1 38s ease-in-out infinite}
+.aur i:nth-child(2){width:38vw;height:38vw;right:-4%;top:-6%;background:#2E86C9;opacity:.5;animation:d2 45s ease-in-out infinite}
+.aur i:nth-child(3){width:32vw;height:32vw;left:28%;top:36%;background:#4FD1FF;opacity:.3;animation:d3 51s ease-in-out infinite}
+.aur i:nth-child(4){width:30vw;height:30vw;right:16%;top:54%;background:#1E6E92;opacity:.42;animation:d4 42s ease-in-out infinite}
+.aur i:nth-child(5){width:36vw;height:36vw;left:8%;top:74%;background:#4FD1FF;opacity:.26;animation:d2 47s ease-in-out infinite}
+@keyframes d1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(16vw,10vh) scale(1.18)}}
+@keyframes d2{0%,100%{transform:translate(0,0) scale(1.05)}50%{transform:translate(-14vw,14vh) scale(.9)}}
+@keyframes d3{0%,100%{transform:translate(0,0) scale(.95)}50%{transform:translate(10vw,-12vh) scale(1.2)}}
+@keyframes d4{0%,100%{transform:translate(0,0) scale(1.1)}50%{transform:translate(-12vw,-8vh) scale(.92)}}
+.veil{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(130% 88% at 50% 2%,rgba(7,10,12,.22),rgba(7,10,12,.80) 56%,rgba(7,10,12,.96) 100%)}
+.mesh{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:78px 78px;
+  mask-image:radial-gradient(90% 70% at 50% 30%,#000,transparent 78%)}
+.grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.3;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)' opacity='.46'/%3E%3C/svg%3E")}
+.shell{position:relative;z-index:3}
+nav,header,section,footer,.band{position:relative;z-index:3}
+.prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--cyan);box-shadow:0 0 12px rgba(79,209,255,.6)}
+
+/* ── type ── */
+.wrap{max-width:1300px;margin:0 auto}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.045em;line-height:1.02;text-wrap:balance}
+.h1{font-size:clamp(46px,7.6vw,104px);letter-spacing:-.048em;line-height:.98}
+.h2{font-size:clamp(32px,4.4vw,54px);letter-spacing:-.038em;line-height:1.04}
+.h3{font-size:clamp(21px,2.1vw,27px);letter-spacing:-.032em;line-height:1.14}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--cyan)}
+.eyebrow b{color:var(--cyan);font-weight:500}
+.g{color:var(--cyan)}
+.lede{font-size:clamp(17px,1.55vw,21px);color:var(--fg-2);max-width:60ch;line-height:1.55;letter-spacing:-.012em}
+.lede b{color:var(--fg);font-weight:600}
+.prose{color:var(--fg-2);max-width:62ch;line-height:1.68}
+.prose b{color:var(--fg);font-weight:600}
+.prose p+p{margin-top:16px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ── nav ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.stuck{background:rgba(5,5,6,.7);backdrop-filter:blur(20px) saturate(150%);
+  border-bottom-color:var(--line);padding-block:12px}
+.logo{display:inline-flex;align-items:baseline;gap:1px;font-weight:800;font-size:16px;
+  letter-spacing:-.052em;text-transform:uppercase;transition:opacity .2s}
+.logo:hover{opacity:.72}
+.logo i{font-style:normal;color:var(--cyan);font-size:1.15em;line-height:0}
+.nlinks{display:flex;gap:6px;align-items:center}
+.nlinks a{font-size:14.5px;color:var(--fg-2);padding:8px 14px;border-radius:100px;transition:.2s;letter-spacing:-.01em}
+.nlinks a:hover{color:var(--fg);background:var(--card)}
+.nlinks a.on{color:var(--fg);background:var(--card-2)}
+.talk{font-size:14.5px;font-weight:600;letter-spacing:-.015em;padding:10px 20px;border-radius:100px;
+  background:var(--cyan);color:var(--ink);transition:.22s;box-shadow:0 4px 16px rgba(79,209,255,.2)}
+.talk:hover{transform:translateY(-2px);background:var(--cyan-2);box-shadow:0 8px 24px rgba(79,209,255,.32)}
+.burger{display:none;width:40px;height:40px;border:1px solid var(--line-2);border-radius:11px;
+  align-items:center;justify-content:center;font-size:15px}
+
+/* ── hero ── */
+.hero{padding:clamp(130px,17vh,190px) var(--pad) clamp(50px,7vw,90px)}
+.hero-in{max-width:1300px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 15px 7px 9px;border-radius:100px;
+  background:var(--card);border:1px solid var(--line);font-size:13px;color:var(--fg-2);margin-bottom:26px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:blip 2.2s infinite;
+  box-shadow:0 0 0 4px rgba(79,209,255,.16)}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.28}}
+/* about portrait */
+.port{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;margin-bottom:12px;
+  background:var(--card)}
+.port img{width:100%;aspect-ratio:4/4.55;object-fit:cover;object-position:50% 20%;display:block;
+  transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.port:hover img{transform:scale(1.03)}
+.port::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(0deg,rgba(7,10,12,.72),transparent 46%)}
+.port .who{position:absolute;left:18px;right:18px;bottom:15px;z-index:2;display:flex;
+  justify-content:space-between;align-items:flex-end;gap:12px}
+.port .who b{font-size:16px;font-weight:700;letter-spacing:-.028em;display:block}
+.port .who span{font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--fg-2);display:block;margin-top:4px}
+.port .who em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--cyan);border:1px solid rgba(79,209,255,.3);
+  background:rgba(79,209,255,.1);border-radius:100px;padding:5px 10px;white-space:nowrap}
+.hero-meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--fg-2);display:flex;flex-wrap:wrap;gap:6px 0}
+.hero-meta span+span::before{content:"";display:inline-block;width:16px;height:1px;background:var(--cyan);
+  vertical-align:middle;margin:0 12px;opacity:.8}
+.hero .lede{margin:clamp(22px,2.6vw,32px) 0 clamp(26px,3vw,38px)}
+.acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-size:15px;font-weight:600;letter-spacing:-.015em;padding:14px 24px;border-radius:100px;
+  border:1px solid var(--line-2);transition:.22s;display:inline-flex;align-items:center;gap:9px}
+.btn:hover{background:var(--card-2);border-color:var(--line-2);transform:translateY(-2px)}
+.btn.pri{background:var(--cyan);color:var(--ink);border-color:transparent;box-shadow:0 6px 20px rgba(79,209,255,.22)}
+.btn.pri:hover{background:var(--cyan-2);box-shadow:0 10px 28px rgba(79,209,255,.34)}
+
+/* ── marquee band ── */
+.band{border-block:1px solid var(--line);padding:clamp(22px,2.8vw,38px) 0;overflow:hidden;
+  background:rgba(255,255,255,.018);display:grid;gap:clamp(4px,.8vw,10px)}
+.mq{display:flex;width:max-content;white-space:nowrap}
+.mq span{font-weight:800;letter-spacing:-.045em;text-transform:uppercase;
+  font-size:clamp(32px,6vw,84px);line-height:1.05;display:flex;align-items:center;
+  gap:clamp(18px,2.6vw,42px);padding-right:clamp(18px,2.6vw,42px)}
+.mq.solid span{color:rgba(255,255,255,.94)}
+.mq.solid span em{font-style:normal;font-size:.42em;color:var(--cyan)}
+.mq.hollow span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.24);font-weight:700}
+.mq.hollow span em{font-style:normal;-webkit-text-stroke:1px var(--cyan);font-size:.8em}
+.mq-a{animation:mqL 46s linear infinite}
+.mq-b{animation:mqR 54s linear infinite}
+@keyframes mqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ── sections ── */
+.sec{padding:clamp(70px,8.6vw,140px) var(--pad);scroll-margin-top:76px}
+.sec-in{max-width:1300px;margin:0 auto}
+.sec-hd{margin-bottom:clamp(32px,4vw,56px)}
+.sec-hd .sub{color:var(--muted);font-size:16.5px;margin-top:20px;max-width:60ch;line-height:1.6}
+
+.best{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.bi{background:rgba(255,255,255,.022);padding:26px 24px;transition:background .26s}
+.bi:hover{background:rgba(255,255,255,.045)}
+.bn{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--cyan);display:block;margin-bottom:12px}
+.bi b{display:block;font-size:18px;font-weight:700;letter-spacing:-.028em;margin-bottom:9px}
+.bi p{font-size:14px;color:var(--muted);line-height:1.6}
+@media(max-width:940px){.best{grid-template-columns:1fr}}
+
+/* cards */
+.glass{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  backdrop-filter:blur(16px);transition:border-color .28s,background .28s,transform .28s}
+.about{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start}
+.statg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.st{padding:24px 22px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  backdrop-filter:blur(16px);transition:.28s}
+.st:hover{background:var(--card-2);border-color:var(--line-2);transform:translateY(-3px)}
+.st .v{font-size:clamp(30px,3.4vw,42px);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--cyan)}
+.st .l{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:12px;line-height:1.55}
+.pil{padding:20px 0;border-top:1px solid var(--line)}
+.pil:first-child{border-top:none;padding-top:0}
+.pil .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+.pil b{display:block;font-size:17.5px;font-weight:700;letter-spacing:-.028em;margin-bottom:6px}
+.pil p{font-size:14.5px;color:var(--muted);line-height:1.6}
+
+.about2{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,.78fr);gap:clamp(26px,3.4vw,48px);
+  align-items:start;margin:clamp(30px,4vw,48px) 0 clamp(44px,5.5vw,76px)}
+.glance{border:1px solid var(--line);border-radius:var(--r);background:var(--card);backdrop-filter:blur(16px);overflow:hidden}
+.glance .gr{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline;
+  padding:13px 18px;border-bottom:1px solid var(--line)}
+.glance .gr:last-child{border-bottom:none}
+.glance .gk{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.glance .gv{font-size:14.5px;color:var(--fg);text-align:right;letter-spacing:-.014em;line-height:1.45}
+.glance .gv em{font-style:normal;color:var(--cyan)}
+.bigstats{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,40px);
+  padding:clamp(30px,3.6vw,46px) 0;border-top:1px solid var(--line)}
+.bigstats b{display:flex;align-items:baseline;font-size:clamp(44px,5.6vw,84px);font-weight:800;
+  letter-spacing:-.058em;line-height:.92;color:var(--cyan)}
+.bigstats b u{text-decoration:none;font-size:.34em;letter-spacing:-.02em;margin-left:.05em}
+.bigstats>div>span{display:block;font-size:13.5px;color:var(--muted);margin-top:14px;line-height:1.45;max-width:24ch}
+.bigstats b span{font-size:inherit;font-weight:inherit;letter-spacing:inherit;color:inherit;display:inline}
+.shipline{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--muted);padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.9}
+.shipline b{color:var(--cyan);font-weight:500}
+.pillrow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  margin-top:clamp(38px,4.4vw,60px);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pillrow .pil{background:rgba(255,255,255,.02);padding:26px 24px;border-top:none}
+@media(max-width:1080px){
+  .about2{grid-template-columns:1fr}
+  .bigstats{grid-template-columns:repeat(2,1fr);row-gap:34px}
+  .pillrow{grid-template-columns:1fr}
+}
+@media(max-width:640px){.bigstats{grid-template-columns:1fr;row-gap:28px}}
+
+
+.olist{list-style:none;display:grid;gap:11px}
+.olist li{font-size:15.5px;color:var(--fg-2);padding-left:24px;position:relative;line-height:1.6}
+.olist li::before{content:"";position:absolute;left:0;top:.68em;width:12px;height:2px;border-radius:2px;background:var(--cyan)}
+.olist li b{color:var(--fg);font-weight:600}
+
+/* company logo tiles */
+.mark{border-radius:12px;overflow:hidden;flex:0 0 auto;display:block;position:relative;
+  border:1px solid var(--line-2);background:#fff}
+.mark img{width:100%;height:100%;object-fit:cover;display:block}
+.wc-top .mark{width:34px;height:34px;border-radius:9px}
+.ocard .mark{width:58px;height:58px;border-radius:16px}
+.mmark{width:46px;height:46px;border-radius:13px;margin-bottom:16px}
+
+/* ══ WORK ══ */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filt{font-size:13.5px;letter-spacing:-.01em;padding:9px 17px;border-radius:100px;border:1px solid var(--line);
+  color:var(--muted);transition:.2s;background:var(--card)}
+.filt:hover{color:var(--fg);border-color:var(--line-2)}
+.filt.on{background:var(--cyan);color:var(--ink);border-color:transparent;font-weight:600}
+.wgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wc{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:22px;
+  overflow:hidden;backdrop-filter:blur(16px);display:flex;flex-direction:column;
+  transition:border-color .3s,background .3s,transform .3s,box-shadow .3s}
+.wc:hover{border-color:var(--line-2);background:var(--card-2);transform:translateY(-5px);
+  box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.wc.gone{display:none}
+.wc.feat{grid-column:span 2}
+.wc-shot{position:relative;overflow:hidden;background:rgba(255,255,255,.03);border-bottom:1px solid var(--line)}
+.wc-shot img{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:top left;
+  filter:grayscale(.24) contrast(1.03) brightness(.92);opacity:.9;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .35s,opacity .35s}
+.wc:hover .wc-shot img{transform:scale(1.035);filter:grayscale(0) contrast(1.03) brightness(1);opacity:1}
+.wc-shot::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,5,6,.75),transparent 52%)}
+.wc-shot .tagl{position:absolute;left:16px;bottom:14px;z-index:2;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);
+  background:rgba(5,5,6,.55);border:1px solid var(--line);border-radius:100px;padding:5px 11px;backdrop-filter:blur(8px)}
+.wc-b{padding:24px 24px 22px;display:flex;flex-direction:column;gap:13px;flex:1}
+.wc-top{display:flex;align-items:center;gap:12px}
+.wc-no{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.1em}
+.wc-org{font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:100px;padding:4px 10px}
+.wc h3{color:var(--fg)}
+.wc .sb{font-size:15px;color:var(--muted);line-height:1.55;flex:1}
+.wc-mets{display:flex;gap:8px;flex-wrap:wrap;padding-top:4px}
+.wc-met{border:1px solid var(--line);border-radius:var(--r-s);padding:9px 12px;background:rgba(255,255,255,.02);min-width:0}
+.wc-met b{display:block;font-size:16.5px;font-weight:800;letter-spacing:-.035em;color:var(--fg)}
+.wc-met span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--muted);margin-top:4px}
+.wc-go{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--cyan);
+  padding-top:12px;border-top:1px solid var(--line);margin-top:4px;letter-spacing:-.01em}
+.wc-go em{font-style:normal;transition:transform .28s}
+.wc:hover .wc-go em{transform:translateX(5px)}
+
+.wc-dia{display:block;padding:20px 22px 16px;border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.022);color:var(--fg-2)}
+.wc-dia svg{width:100%;height:auto;max-height:186px;display:block}
+.mdia{border:1px solid var(--line);border-radius:var(--r-s);background:rgba(255,255,255,.022);
+  padding:24px 24px 16px;margin-bottom:26px;color:var(--fg-2)}
+.mdia svg{width:100%;height:auto;display:block}
+.mdia figcaption{font-size:13px;color:var(--muted);line-height:1.55;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--line)}
+
+/* modal */
+.mod{position:fixed;inset:0;z-index:80;display:none;justify-content:flex-end}
+.mod.show{display:flex}
+.mod-bg{position:absolute;inset:0;background:rgba(3,3,4,.8);backdrop-filter:blur(6px);animation:fade .3s}
+@keyframes fade{from{opacity:0}}
+.mod-box{position:relative;width:min(780px,100%);height:100%;overflow-y:auto;background:#0A0A0C;
+  border-left:1px solid var(--line-2);padding:clamp(26px,3.6vw,52px);animation:slide .4s cubic-bezier(.2,.85,.25,1)}
+@keyframes slide{from{transform:translateX(44px);opacity:0}}
+.mod-box h3{font-size:clamp(30px,3.8vw,46px);letter-spacing:-.045em;line-height:1;margin:14px 0 12px}
+.mod-sub{font-size:17px;color:var(--fg-2);line-height:1.5;margin-bottom:24px;letter-spacing:-.014em}
+.mmeta{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden;margin-bottom:26px}
+.mmeta div{background:#0A0A0C;padding:13px 15px}
+.mmeta .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.mmeta .v{font-size:14px;color:var(--fg);margin-top:5px;letter-spacing:-.012em}
+.mshot{border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden;margin-bottom:26px}
+.mshot img{width:100%}
+.mshot .cap{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--dim);padding:10px 13px;border-top:1px solid var(--line)}
+.mrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.mrow div{flex:1;min-width:118px;border:1px solid var(--line);border-radius:var(--r-s);padding:13px 14px;background:rgba(255,255,255,.02)}
+.mrow b{display:block;font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--cyan)}
+.mrow span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--muted);margin-top:5px}
+.mb{padding:22px 0;border-top:1px solid var(--line)}
+.mb .ml{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:11px;display:flex;align-items:center;gap:10px}
+.mb .ml::before{content:"";width:14px;height:1px;background:var(--cyan)}
+.mb p{color:var(--fg-2);font-size:16px;line-height:1.68}
+.mb p+p{margin-top:14px}
+.mb.key .ml{color:var(--cyan)}
+.mb.key .ml::before{background:var(--cyan)}
+.mb.imp{background:rgba(79,209,255,.055);border:1px solid rgba(79,209,255,.24);border-radius:var(--r-s);padding:20px}
+.mb.imp .ml{color:var(--cyan)}
+.mb.imp p{color:var(--fg);font-weight:500}
+.mb.learn{background:rgba(255,255,255,.035);border:1px solid var(--line-2);border-radius:var(--r-s);padding:20px}
+.mb.learn .ml{color:var(--fg-2)}
+.mb.learn .ml::before{background:var(--fg-2)}
+.mstack{display:flex;flex-wrap:wrap;gap:7px;padding-top:22px}
+.mstack span{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);
+  border-radius:100px;padding:6px 12px}
+.mnav{display:flex;justify-content:space-between;gap:10px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.mx{position:absolute;top:18px;right:18px;font-size:13px;color:var(--muted);border:1px solid var(--line);
+  border-radius:100px;padding:9px 15px;transition:.2s;background:rgba(10,10,12,.8);backdrop-filter:blur(8px)}
+.mx:hover{color:var(--fg);border-color:var(--cyan)}
+
+/* experience — organisation cards */
+.orgs{display:grid;gap:14px}
+.ocard{width:100%;max-width:100%;box-sizing:border-box;text-align:left;display:block;
+  background:var(--card);border:1px solid var(--line);border-radius:22px;backdrop-filter:blur(16px);
+  padding:clamp(22px,2.4vw,30px);cursor:pointer;
+  transition:border-color .3s,background .3s,transform .3s,box-shadow .3s}
+.ocard:hover{border-color:var(--line-2);background:var(--card-2);transform:translateY(-4px);
+  box-shadow:0 22px 52px rgba(0,0,0,.45)}
+.oc-top{display:grid;grid-template-columns:auto minmax(0,1fr) max-content;
+  gap:clamp(14px,1.8vw,22px);align-items:center}
+.oc-top>*{min-width:0}
+.oc-nm{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.oc-nm b{font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-.042em;line-height:1.05}
+.oc-nm em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.oc-tag{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--cyan);margin-top:10px}
+.oc-role{text-align:right;max-width:30ch;overflow-wrap:break-word}
+.oc-role b{display:block;font-size:14.5px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.oc-role i{display:block;font-style:normal;font-size:12.5px;font-weight:500;color:var(--fg-2);margin-top:4px}
+.oc-role span{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.05em}
+.oc-desc{font-size:14.5px;color:var(--fg-2);line-height:1.62;margin-top:16px;max-width:96ch}
+.oc-go{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--cyan);
+  margin-top:16px;padding-top:15px;border-top:1px solid var(--line);letter-spacing:-.01em}
+.oc-go em{font-style:normal;transition:transform .28s}
+.ocard:hover .oc-go em{transform:translateX(5px)}
+.creds2{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:clamp(24px,2.6vw,32px)}
+.cr{border:1px solid var(--line);border-radius:var(--r);background:var(--card);backdrop-filter:blur(16px);
+  padding:20px 22px;transition:.26s}
+.cr:hover{background:var(--card-2);border-color:var(--line-2)}
+.cr-h{display:flex;align-items:center;gap:13px;margin-bottom:13px}
+.cr-h .mark{width:38px;height:38px;border-radius:11px}
+.cr .ck{font-family:var(--mono);font-size:9.5px;letter-spacing:.19em;text-transform:uppercase;color:var(--cyan);margin-bottom:11px}
+.cr b{display:block;font-size:16.5px;font-weight:700;letter-spacing:-.026em;line-height:1.25}
+.cr span{display:block;font-size:13px;color:var(--muted);margin-top:7px;line-height:1.45}
+@media(max-width:860px){
+  .oc-top{grid-template-columns:auto minmax(0,1fr)}
+  .oc-role{grid-column:1/-1;text-align:left;max-width:none;padding-top:4px}
+  .oc-role i,.oc-role span{margin-top:3px}
+}
+@media(max-width:900px){.creds2{grid-template-columns:1fr}}
+
+/* toolkit */
+.kits{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.kit{padding:24px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);backdrop-filter:blur(16px);transition:.28s}
+.kit:hover{background:var(--card-2);border-color:var(--line-2)}
+.kit h4{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--fg);font-weight:500;margin-bottom:18px}
+.kit h4 i{width:30px;height:30px;border-radius:9px;background:var(--cyan-dim);
+  border:1px solid rgba(79,209,255,.3);display:grid;place-items:center;font-style:normal;font-size:13px;color:var(--cyan)}
+.kit .tags{display:flex;flex-wrap:wrap;gap:7px}
+.kit .tags span{font-size:13.5px;color:var(--fg-2);border:1px solid var(--line);border-radius:100px;
+  padding:7px 13px;background:rgba(255,255,255,.02);letter-spacing:-.01em;transition:.2s}
+.kit .tags span:hover{border-color:var(--line-2);color:var(--fg)}
+.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.crd{padding:24px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);backdrop-filter:blur(16px)}
+.crd h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:15px;font-weight:500}
+.crd .r{display:flex;justify-content:space-between;gap:16px;padding:9px 0;font-size:15px;color:var(--fg-2);
+  border-bottom:1px solid var(--line)}
+.crd .r:last-child{border-bottom:none}
+.crd .r span{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap;text-align:right}
+
+/* contact */
+.contact{padding:clamp(74px,9vw,150px) var(--pad) clamp(40px,5vw,64px);scroll-margin-top:76px}
+.cbig{font-size:clamp(48px,10vw,152px);font-weight:800;letter-spacing:-.058em;line-height:.9;margin-bottom:clamp(26px,3.4vw,44px)}
+.clinks{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:clamp(32px,4vw,52px)}
+.cl{padding:22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);
+  backdrop-filter:blur(16px);transition:.26s}
+a.cl:hover{background:var(--card-2);border-color:var(--line-2);transform:translateY(-3px)}
+.cl .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.cl .v{font-size:15px;color:var(--fg);word-break:break-word;letter-spacing:-.014em}
+a.cl:hover .v{color:var(--cyan)}
+footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--dl,0s)}
+
+/* responsive */
+@media(max-width:1080px){
+  .about{grid-template-columns:1fr;gap:34px}
+  .wgrid{grid-template-columns:1fr}
+  .wc.feat{grid-column:span 1}
+  .kits{grid-template-columns:1fr}
+  .clinks{grid-template-columns:repeat(2,1fr)}
+  .xp{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:720px){
+  body{font-size:16px}
+  .nlinks{position:fixed;inset:66px 12px auto 12px;flex-direction:column;align-items:stretch;gap:2px;
+    background:rgba(12,12,14,.97);border:1px solid var(--line-2);border-radius:var(--r);padding:8px;display:none;z-index:60;
+    backdrop-filter:blur(20px)}
+  .nlinks.open{display:flex}
+  .nlinks a{padding:13px 15px;border-radius:var(--r-s)}
+  .talk{display:none}
+  .burger{display:flex}
+  .statg{grid-template-columns:1fr}
+  .creds,.clinks{grid-template-columns:1fr}
+  .mmeta{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .js .rv{opacity:1;transform:none}
+  .aur{opacity:.4}
+}
+.mb.how{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:var(--r-s);padding:18px 20px}
+.mb.how .ml{color:var(--muted)}
+.mb.how .ml::before{background:var(--muted)}
+.mb.how p{font-size:14.5px;color:var(--muted);line-height:1.66}
+.scale{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:clamp(28px,3.2vw,44px)}
+.scale div{background:rgba(255,255,255,.022);padding:22px 22px 20px}
+.scale b{display:block;font-family:var(--sans);font-size:clamp(26px,2.9vw,38px);font-weight:800;
+  letter-spacing:-.03em;line-height:1;color:var(--cyan)}
+.scale span{display:block;font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
+.scale em{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--fg-2);opacity:.55;font-style:normal;margin-top:9px}
+.confid{font-size:13.5px;color:var(--muted);line-height:1.66;border-left:2px solid rgba(79,209,255,.35);
+  padding:2px 0 2px 16px;margin-top:18px;max-width:78ch}
+.confid b{color:var(--fg-2);font-weight:600}
+@media(max-width:900px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.scale{grid-template-columns:1fr}}
+</style>
+
+<div class="aur" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="veil" aria-hidden="true"></div>
+<div class="mesh" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="shell">
+<nav class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Himanshu Rana — home">Himanshu&nbsp;Rana<i>.</i></a>
+  <div class="nlinks" id="nlinks">
+    <a href="#about" data-s="about">About</a>
+    <a href="#work" data-s="work">Work</a>
+    <a href="#experience" data-s="experience">Experience</a>
+    <a href="#toolkit" data-s="toolkit">Toolkit</a>
+    <a href="#contact" data-s="contact">Contact</a>
+  </div>
+  <a class="talk" href="mailto:himanshuranaa23@gmail.com">Let's talk</a>
+  <button class="burger" id="burger" aria-expanded="false">☰</button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div class="badge rv"><i></i>Open to Product Manager · Senior PM · AI PM roles</div>
+    <div class="hero-meta rv" style="--dl:.04s;margin-bottom:clamp(20px,2.6vw,30px)"><span>B2B SaaS</span><span>0→1 &amp; Platform</span><span>LLM agents in production</span><span>Gurugram, IN</span></div>
+    <h1 class="h1 rv" style="--dl:.08s">I build B2B SaaS<br>people <span class="g">actually decide with</span>.</h1>
+    <p class="lede rv" style="--dl:.14s">Five years of product across enterprise data platforms, industrial SaaS and public-sector operations. I take the spreadsheet somebody rebuilds every Monday and replace it with <b>a product they open every morning</b> — discovery first, instrumented on day one, every release closed out with a number.</p>
+    <div class="acts rv" style="--dl:.2s">
+      <a class="btn pri" href="#work">See the work →</a>
+      <a class="btn" href="Himanshu-Rana-CV.pdf" download>Download CV ↓</a>
+      <a class="btn" href="mailto:himanshuranaa23@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/himanshurana23" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true">
+  <div class="mq solid mq-a" id="mqA"></div>
+  <div class="mq hollow mq-b" id="mqB"></div>
+</div>
+
+<section class="sec" id="best" style="padding-block:clamp(46px,5.4vw,84px)">
+  <div class="sec-in">
+    <div class="best">
+      <div class="bi rv"><span class="bn">01</span><b>0→1 platform ownership</b>
+        <p>Blank page to five signed enterprise accounts as the only PM — data model and metric dictionary agreed with finance before a screen was designed, then seven modules shipped against it.</p></div>
+      <div class="bi rv" style="--dl:.06s"><span class="bn">02</span><b>AI with production guardrails</b>
+        <p>Three shipped AI surfaces and an agent prototype where the model translates but never computes — so a wrong answer is a structural impossibility rather than a prompt instruction. Thresholds set for precision; a human kept in the loop because somebody has to own a wrong answer.</p></div>
+      <div class="bi rv" style="--dl:.12s"><span class="bn">03</span><b>Decisions made measurable</b>
+        <p>Instrumentation before argument, and every number on this page carries the method that produced it — instrument, window, comparison. Friction ranked by users lost rather than by opinion, which ended a two-quarter debate and moved conversion, adoption and revenue.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 01 ABOUT ══ -->
+<section class="sec" id="about">
+  <div class="sec-in">
+    <div class="eyebrow"><b>01</b> — About</div>
+    <h2 class="h2 rv" style="max-width:19ch">I ship products that move a number, <span class="g">not features that fill a roadmap</span>.</h2>
+    <div class="about2">
+      <div class="prose rv" style="--dl:.06s">
+        <p>Five years across three very different B2B products — an enterprise data intelligence platform, an industrial operating system for manufacturing plants, and a state-scale public data programme. Different markets, one craft: find where the decision is actually made, work out why people trust their own spreadsheet more than the system, and build the thing that replaces it.</p>
+        <p>Most recently I took a platform from a blank page to five signed enterprise accounts as its only PM — defining the data model and metric dictionary with finance before a screen was designed, then shipping seven modules against it. Before that I owned a multi-module roadmap through 100+ features, lifting adoption 35% YoY and annual revenue 20%.</p>
+        <p>The AI work is what I care most about now, and I treat it as production judgement rather than a feature label. Three of the seven cases here are AI surfaces: generation constrained to pre-computed indices so a read-out cannot be confidently wrong, an alert threshold set for precision because a muted channel is a dead feature, and an agent whose only capability is one typed tool — it translates a question into a filter state and never computes a figure itself. I care more about where the guardrail sits than about which model is behind it.</p>
+        <p>I write case studies the way I would defend a decision in review — the constraint, the option I rejected, the tradeoff I accepted, the number it moved, and what I would do differently.</p>
+      </div>
+      <div>
+        <div class="port rv" style="--dl:.1s"><img src="assets/portrait.webp" alt="Himanshu Rana">
+          <span class="who"><span><b>Himanshu Rana</b><span>Product Manager</span></span><em>Open to roles</em></span></div>
+        <div class="glance rv" style="--dl:.14s">
+          <div class="gr"><span class="gk">Open to</span><span class="gv"><em>Product Manager</em> · Senior PM · AI PM</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bigstats rv">
+      <div><b><span data-n="5">0</span><u>+ yrs</u></b><span>in product, across three B2B platforms</span></div>
+      <div><b><span data-n="7">0</span><u></u></b><span>modules taken 0→1 as sole PM</span></div>
+      <div><b><span data-n="100">0</span><u>+</u></b><span>features shipped to production</span></div>
+      <div><b><span data-n="45">0</span><u>L+</u></b><span>records digitised at state scale</span></div>
+    </div>
+    <div class="shipline rv">SHIPPED ACROSS <b>ENTERPRISE DATA</b>, <b>INDUSTRIAL SAAS</b> AND <b>PUBLIC-SECTOR OPERATIONS</b> &nbsp;·&nbsp; iOL &nbsp;/&nbsp; DF-OS &nbsp;/&nbsp; YCSPL</div>
+
+    <div class="pillrow rv">
+      <div class="pil"><div class="k">01 — Discover</div><b>Sit with the operator</b>
+        <p>Discovery with the people doing the manual version. The spreadsheet they built for themselves is the specification — including the parts they are embarrassed by.</p></div>
+      <div class="pil"><div class="k">02 — Define</div><b>Agree the grain first</b>
+        <p>Metric dictionary and entity grain settled with finance and data before a screen is designed. Numbers that disagree across screens kill adoption faster than missing features.</p></div>
+      <div class="pil"><div class="k">03 — Ship</div><b>One closed loop at a time</b>
+        <p>Each release completes a whole decision rather than a third of three. Instrumented on day one, measured against the manual baseline it replaced.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 WORK ══ -->
+<section class="sec" id="work">
+  <div class="sec-in">
+    <div class="sec-hd">
+      <div class="eyebrow"><b>02</b> — Selected work</div>
+      <h2 class="h2 rv">Seven cases, <span class="g">seven numbers</span>.</h2>
+      <p class="sub rv" style="--dl:.06s">Four from the platform I own now — including the agent prototype — two from an industrial SaaS roadmap, one from operations at state scale. Open any card for the full case — context, constraints, the option I rejected, the tradeoff I accepted, the measured impact, and what I'd do differently. Product screens are from the live tool with commercial figures blurred.</p>
+      <p class="confid rv" style="--dl:.1s"><b>On verifying these numbers.</b> Every case carries a <b>How this was measured</b> note — the instrument, the window and the comparison basis — so you can judge the method rather than take the figure on trust. Percentages are given instead of absolute revenue and volumes because those are commercially confidential; where a number was reported to me rather than computed by me, the note says so. I am happy to walk through the underlying boards, dashboards and PRDs in an interview.</p>
+    </div>
+    <div class="filters rv">
+      <button class="filt on" data-f="all">All work</button>
+      <button class="filt" data-f="platform">Platform &amp; 0→1</button>
+      <button class="filt" data-f="ai">AI products</button>
+      <button class="filt" data-f="growth">Growth &amp; commercial</button>
+      <button class="filt" data-f="ops">Operations at scale</button>
+    </div>
+    <div class="wgrid" id="wgrid"></div>
+  </div>
+</section>
+
+<!-- ══ 03 EXPERIENCE ══ -->
+<section class="sec" id="experience">
+  <div class="sec-in">
+    <div class="eyebrow"><b>03</b> — Organisations</div>
+    <h2 class="h2 rv" style="margin-bottom:clamp(22px,2.4vw,30px)">Where it was <span class="g">built</span>.</h2>
+    <p class="sub rv" style="max-width:64ch;margin-bottom:clamp(26px,3vw,38px)">Three organisations, three very different scales of operation — an enterprise platform built from nothing, a multi-module industrial roadmap, and a public programme run across 82 towns.</p>
+    
+    <div class="scale rv">
+      <div><b>7</b><span>modules taken 0&#8594;1 as the only PM on the platform</span><em>iOL Pulse &#183; 2025&#8211;now</em></div>
+      <div><b>12</b><span>engineers, plus UX and data, in the squad I write for</span><em>Single delivery squad</em></div>
+      <div><b>5+</b><span>enterprise accounts signed with the platform in the evaluation</span><em>Hospitality groups</em></div>
+      <div><b>100+</b><span>features shipped across a multi-module industrial roadmap</span><em>Df-OS &#183; 2022&#8211;25</em></div>
+      <div><b>45L+</b><span>property records digitised across 82 towns</span><em>YCSPL &#183; state programme</em></div>
+      <div><b>40+</b><span>field teams coordinated with no authority over any of them</span><em>Influence, not mandate</em></div>
+    </div>
+    <div class="orgs">
+      <button class="ocard rv" data-org="0">
+        <span class="oc-top">
+          <span class="mark"><img src="assets/logo-iol.webp" alt="iOL logo"></span>
+          <span><span class="oc-nm"><b>iOL</b><em>iOL Pulse</em></span><span class="oc-tag">Enterprise SaaS · AI products</span></span>
+          <span class="oc-role"><b>Product Manager</b><i>Sole PM on the platform</i><span>2025 to now</span></span>
+        </span>
+        <p class="oc-desc">A B2B data intelligence platform for enterprise hospitality groups — seven modules spanning revenue analytics, pricing and rate parity, competitive benchmarking, distribution health and demand signals, deployed across enterprise accounts in the Middle East and South Asia. Built into a category already served by Lighthouse, IDeaS, Duetto and Amadeus — the wedge was the chain-level data model those tools assume you already have. I own the platform end to end as its only product manager, working with a squad of twelve.</p>
+        <span class="oc-go">Full role <em>→</em></span>
+      </button>
+      <button class="ocard rv" data-org="1">
+        <span class="oc-top">
+          <span class="mark"><img src="assets/logo-dfos.webp" alt="Df-OS logo"></span>
+          <span><span class="oc-nm"><b>Df-OS</b><em>formerly DesignX · Digital Factory OS</em></span><span class="oc-tag">Industry 4.0 · Manufacturing SaaS</span></span>
+          <span class="oc-role"><b>Product Manager</b><span>2022 to 2025</span></span>
+        </span>
+        <p class="oc-desc">A SaaS platform that digitises shop-floor processes end to end for manufacturing plants, with real-time operational insight and ERP/IoT integration. Founded as DesignX and rebranded to Df-OS during my tenure. I was the full-time product manager owning the multi-module roadmap and the activation and conversion funnels, shipping 100+ features with engineering, UX, QA and BAU squads.</p>
+        <span class="oc-go">Full role <em>→</em></span>
+      </button>
+      <button class="ocard rv" data-org="2">
+        <span class="oc-top">
+          <span class="mark"><img src="assets/logo-ycspl.webp" alt="YCSPL logo"></span>
+          <span><span class="oc-nm"><b>YCSPL</b><em>GIS &amp; urban data</em></span><span class="oc-tag">Public sector · Data operations</span></span>
+          <span class="oc-role"><b>Business Analyst</b><span>2021 to 2022</span></span>
+        </span>
+        <p class="oc-desc">A geospatial data services firm delivering property-record digitisation for state government — field survey operations, GIS mapping and municipal tax-base data at state scale. I ran the workflow and the error-correction loop across 40+ field teams and 82 towns.</p>
+        <span class="oc-go">Full role <em>→</em></span>
+      </button>
+    </div>
+    <div class="creds2 rv">
+      <div class="cr"><div class="cr-h"><span class="mark"><img src="assets/logo-nextleap.webp" alt="NextLeap"></span><span class="ck" style="margin:0">Certification</span></div><b>Product Management Fellowship</b><span>NextLeap · product strategy, discovery and delivery</span></div>
+      <div class="cr"><div class="cr-h"><span class="mark"><img src="assets/logo-analytixlabs.webp" alt="AnalytixLabs"></span><span class="ck" style="margin:0">Certification</span></div><b>Business Analyst Certification</b><span>AnalytixLabs · requirements, process and data analysis</span></div>
+      <div class="cr"><div class="cr-h"><span class="ck" style="margin:0">Education</span></div><b>B.Tech</b><span>Uttaranchal University · 2016 to 2020</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 TOOLKIT ══ -->
+<section class="sec" id="toolkit">
+  <div class="sec-in">
+    <div class="sec-hd">
+      <div class="eyebrow"><b>04</b> — Toolkit</div>
+      <h2 class="h2 rv">What I <span class="g">work with</span>.</h2>
+    </div>
+    <div class="kits rv">
+      <div class="kit"><h4><i>◈</i>Product</h4><div class="tags">
+        <span>Customer discovery</span><span>PRD / BRD</span><span>Roadmapping</span><span>OKRs &amp; KPIs</span>
+        <span>Prioritisation</span><span>GTM strategy</span><span>A/B testing</span><span>Experiment design</span></div></div>
+      <div class="kit"><h4><i>▤</i>Data</h4><div class="tags">
+        <span>SQL</span><span>PostgreSQL</span><span>Mixpanel</span><span>Funnel analysis</span>
+        <span>Metric dictionaries</span><span>Data modelling</span><span>Dashboard design</span><span>GIS tooling</span></div></div>
+      <div class="kit"><h4><i>✦</i>AI &amp; Gen AI</h4><div class="tags">
+        <span>Gen AI product management</span><span>AI/ML product management</span><span>LLM workflows</span>
+        <span>Automated event tagging</span><span>Human-in-the-loop</span><span>Threshold &amp; guardrail design</span></div></div>
+      <div class="kit"><h4><i>◎</i>Domains shipped in</h4><div class="tags">
+        <span>Enterprise data platforms</span><span>Industrial &amp; manufacturing SaaS</span><span>Revenue &amp; pricing systems</span>
+        <span>Distribution &amp; channel ops</span><span>Public-sector data</span><span>Multi-tenant B2B</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 CONTACT ══ -->
+<section class="contact" id="contact">
+  <div class="sec-in">
+    <div class="eyebrow"><b>05</b> — Contact</div>
+    <h2 class="cbig rv" style="--dl:.04s">Let's <span class="g">talk</span>.</h2>
+    <p class="lede rv" style="--dl:.1s">Open to product roles and interesting conversations — 0→1 builds, data platforms, AI in the workflow, and anything where the current answer is a spreadsheet someone rebuilds every Monday.</p>
+    <div class="clinks rv" style="--dl:.16s">
+      <a class="cl" href="mailto:himanshuranaa23@gmail.com"><div class="k">Email</div><div class="v">himanshuranaa23@gmail.com</div></a>
+      <a class="cl" href="tel:+919990303798"><div class="k">Phone</div><div class="v">+91 99903 03798</div></a>
+      <a class="cl" href="https://www.linkedin.com/in/himanshurana23" target="_blank" rel="noopener"><div class="k">LinkedIn</div><div class="v">/in/himanshurana23 ↗</div></a>
+      <a class="cl" href="Himanshu-Rana-CV.pdf" download><div class="k">CV</div><div class="v">Himanshu-Rana-CV.pdf ↓</div></a>
+      <div class="cl"><div class="k">Based in</div><div class="v">Gurugram, Haryana</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Himanshu Rana — Product Manager</span>
+  <span>Available for work</span>
+</footer>
+</div>
+
+<div class="mod" id="omod" role="dialog" aria-modal="true">
+  <div class="mod-bg" data-oclose></div>
+  <div class="mod-box" id="omodBox">
+    <button class="mx" data-oclose>Close ✕</button>
+    <span class="mark mmark" id="oMark"></span>
+    <div class="eyebrow" id="oCat" style="margin-bottom:0"></div>
+    <h3 id="oTitle"></h3>
+    <p class="mod-sub" id="oSub"></p>
+    <div class="mmeta" id="oMeta"></div>
+    <div class="mb"><div class="ml">Scope</div><p id="oScope"></p></div>
+    <div class="mb"><div class="ml">What I shipped</div><ul class="olist" id="oList"></ul></div>
+  </div>
+</div>
+
+<div class="mod" id="mod" role="dialog" aria-modal="true">
+  <div class="mod-bg" data-close></div>
+  <div class="mod-box" id="modBox">
+    <button class="mx" data-close>Close ✕</button>
+    <span class="mark mmark" id="mMark"></span>
+    <div class="eyebrow" id="mCat" style="margin-bottom:0"></div>
+    <h3 id="mTitle"></h3>
+    <p class="mod-sub" id="mSub"></p>
+    <div class="mmeta" id="mMeta"></div>
+    <div id="mShot"></div>
+    <div class="mrow" id="mRow"></div>
+    <div class="mb"><div class="ml">Context</div><p id="mCtx"></p></div>
+    <div class="mb"><div class="ml">The problem</div><p id="mP"></p></div>
+    <div class="mb"><div class="ml">Constraints</div><p id="mCons"></p></div>
+    <div class="mb key"><div class="ml">Approach &amp; key decisions</div><div id="mA"></div></div>
+    <div class="mb"><div class="ml">How it shipped</div><p id="mShip"></p></div>
+    <div class="mb imp" style="margin-top:22px"><div class="ml">Impact</div><p id="mR"></p></div>
+    <div class="mb how" id="mHowB" style="margin-top:14px"><div class="ml">How this was measured</div><p id="mHow"></p></div>
+    <div class="mb learn" style="margin-top:14px;border-top:1px solid rgba(255,180,84,.2)"><div class="ml">What I'd do differently</div><p id="mLearn"></p></div>
+    <div class="mstack" id="mStack"></div>
+    <div class="mnav"><button class="btn" id="mPrev">← Previous</button><button class="btn" id="mNext">Next case →</button></div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const DIA={"onboarding": {"svg": "<svg viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"Before instrumentation the team argued from anecdote and repeated the cycle; after, every drop was sized by users lost and each fix was individually attributed\" style=\"width:100%;height:auto\">\n<defs><marker id=\"ar1\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\"/></marker>\n<marker id=\"ar1a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#4FD1FF\"/></marker></defs>\n<g font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" letter-spacing=\"1.6\" fill=\"currentColor\" opacity=\".55\">\n<text x=\"0\" y=\"30\">BEFORE</text><text x=\"0\" y=\"188\">AFTER</text></g>\n<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".45\">\n<rect x=\"0\" y=\"44\" width=\"150\" height=\"46\" rx=\"8\"/><rect x=\"196\" y=\"44\" width=\"132\" height=\"46\" rx=\"8\"/>\n<rect x=\"374\" y=\"44\" width=\"122\" height=\"46\" rx=\"8\"/><rect x=\"542\" y=\"44\" width=\"176\" height=\"46\" rx=\"8\"/></g>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".75\" text-anchor=\"middle\">\n<text x=\"75\" y=\"63\">Three competing</text><text x=\"75\" y=\"78\">hypotheses</text>\n<text x=\"262\" y=\"71\">Argue in planning</text>\n<text x=\"435\" y=\"71\">Build a fix</text>\n<text x=\"630\" y=\"63\">A sprint spent,</text><text x=\"630\" y=\"78\">nothing learned</text></g>\n<g stroke=\"currentColor\" stroke-width=\"1\" opacity=\".45\" marker-end=\"url(#ar1)\">\n<line x1=\"152\" y1=\"67\" x2=\"192\" y2=\"67\"/><line x1=\"330\" y1=\"67\" x2=\"370\" y2=\"67\"/><line x1=\"498\" y1=\"67\" x2=\"538\" y2=\"67\"/></g>\n<path d=\"M630 92 C630 126 262 126 262 94\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".45\" marker-end=\"url(#ar1)\"/>\n<text x=\"446\" y=\"122\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.4\" fill=\"currentColor\" opacity=\".5\" text-anchor=\"middle\">REPEAT</text>\n<line x1=\"0\" y1=\"150\" x2=\"760\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".14\"/>\n<g fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\">\n<rect x=\"0\" y=\"202\" width=\"158\" height=\"46\" rx=\"8\"/><rect x=\"204\" y=\"202\" width=\"166\" height=\"46\" rx=\"8\"/>\n<rect x=\"416\" y=\"202\" width=\"140\" height=\"46\" rx=\"8\"/><rect x=\"602\" y=\"202\" width=\"158\" height=\"46\" rx=\"8\"/></g>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" text-anchor=\"middle\">\n<text x=\"79\" y=\"221\">Instrument</text><text x=\"79\" y=\"236\">every step</text>\n<text x=\"287\" y=\"221\">Size each drop by</text><text x=\"287\" y=\"236\">users lost</text>\n<text x=\"486\" y=\"221\">A/B the two</text><text x=\"486\" y=\"236\">biggest losses</text></g>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#4FD1FF\" text-anchor=\"middle\">\n<text x=\"681\" y=\"221\">−25% drop-off</text></g>\n<text x=\"681\" y=\"236\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"10.5\" fill=\"currentColor\" opacity=\".7\" text-anchor=\"middle\">each change attributed</text>\n<g stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar1a)\">\n<line x1=\"160\" y1=\"225\" x2=\"200\" y2=\"225\"/><line x1=\"372\" y1=\"225\" x2=\"412\" y2=\"225\"/><line x1=\"558\" y1=\"225\" x2=\"598\" y2=\"225\"/></g>\n<text x=\"0\" y=\"284\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.3\" fill=\"currentColor\" opacity=\".45\">INSTRUMENTATION IS NOT A LIFT — IT IS WHAT ENDS THE LOOP</text>\n</svg>", "cap": "Instrumentation was not the lift — it was what ended a two-quarter argument."}, "reframe": {"svg": "<svg viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"Ranking friction by opinion takes four conflicting inputs and produces no ordering; ranking by users lost takes one measured input and produces a worked list\" style=\"width:100%;height:auto\">\n<defs><marker id=\"ar2\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\"/></marker>\n<marker id=\"ar2a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#4FD1FF\"/></marker></defs>\n<g font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" letter-spacing=\"1.6\" fill=\"currentColor\" opacity=\".55\">\n<text x=\"0\" y=\"20\">THE OLD QUESTION</text><text x=\"420\" y=\"20\">THE REFRAME</text></g>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11\" fill=\"currentColor\" opacity=\".7\" text-anchor=\"end\">\n<text x=\"86\" y=\"62\">Sales</text><text x=\"86\" y=\"94\">Engineering</text><text x=\"86\" y=\"126\">UX</text><text x=\"86\" y=\"158\">Support</text></g>\n<g stroke=\"currentColor\" stroke-width=\"1\" opacity=\".4\" marker-end=\"url(#ar2)\">\n<line x1=\"94\" y1=\"58\" x2=\"150\" y2=\"100\"/><line x1=\"94\" y1=\"90\" x2=\"150\" y2=\"104\"/>\n<line x1=\"94\" y1=\"122\" x2=\"150\" y2=\"112\"/><line x1=\"94\" y1=\"154\" x2=\"150\" y2=\"118\"/></g>\n<rect x=\"156\" y=\"86\" width=\"146\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".45\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".75\" text-anchor=\"middle\">\n<text x=\"229\" y=\"105\">Which experience</text><text x=\"229\" y=\"120\">is worst?</text></g>\n<line x1=\"304\" y1=\"109\" x2=\"340\" y2=\"109\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".4\" marker-end=\"url(#ar2)\"/>\n<rect x=\"344\" y=\"86\" width=\"34\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".4\"/>\n<text x=\"361\" y=\"114\" font-size=\"15\" fill=\"currentColor\" opacity=\".45\" text-anchor=\"middle\">?</text>\n<text x=\"229\" y=\"176\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.3\" fill=\"currentColor\" opacity=\".5\" text-anchor=\"middle\">FOUR OPINIONS, NO ORDER</text>\n<line x1=\"400\" y1=\"30\" x2=\"400\" y2=\"270\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".14\"/>\n<rect x=\"420\" y=\"86\" width=\"150\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".5\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".8\" text-anchor=\"middle\">\n<text x=\"495\" y=\"105\">Funnel data</text><text x=\"495\" y=\"120\">SQL + Mixpanel</text></g>\n<line x1=\"572\" y1=\"109\" x2=\"606\" y2=\"109\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar2a)\"/>\n<rect x=\"610\" y=\"80\" width=\"150\" height=\"58\" rx=\"8\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" text-anchor=\"middle\">\n<text x=\"685\" y=\"100\">Which loses the</text><text x=\"685\" y=\"115\">most users?</text></g>\n<text x=\"685\" y=\"130\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" letter-spacing=\"1.2\" fill=\"#4FD1FF\" text-anchor=\"middle\">ONE MEASURED INPUT</text>\n<g stroke=\"#4FD1FF\" stroke-width=\"1.2\" opacity=\".85\">\n<line x1=\"612\" y1=\"166\" x2=\"686\" y2=\"166\"/><line x1=\"612\" y1=\"184\" x2=\"662\" y2=\"184\"/>\n<line x1=\"612\" y1=\"202\" x2=\"644\" y2=\"202\"/><line x1=\"612\" y1=\"220\" x2=\"630\" y2=\"220\"/></g>\n<text x=\"760\" y=\"170\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" fill=\"currentColor\" opacity=\".6\" text-anchor=\"end\">ordered by</text>\n<text x=\"760\" y=\"184\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" fill=\"currentColor\" opacity=\".6\" text-anchor=\"end\">users lost</text>\n<text x=\"420\" y=\"262\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#4FD1FF\">+18% conversion · +30% first-week adoption · +20% annual revenue</text>\n</svg>", "cap": "One measured input replaced four conflicting opinions, and the list could then be worked in order."}, "loop": {"svg": "<svg viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Errors reported into a central spreadsheet were a dead end; routing them back to the responsible team with the record attached closed the loop and resolved 76 percent\" style=\"width:100%;height:auto\">\n<defs><marker id=\"ar3\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\"/></marker>\n<marker id=\"ar3a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#4FD1FF\"/></marker></defs>\n<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".5\">\n<rect x=\"0\" y=\"96\" width=\"128\" height=\"46\" rx=\"8\"/><rect x=\"176\" y=\"96\" width=\"128\" height=\"46\" rx=\"8\"/></g>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".8\" text-anchor=\"middle\">\n<text x=\"64\" y=\"115\">Field team</text><text x=\"64\" y=\"130\">surveys a record</text>\n<text x=\"240\" y=\"115\">Error found in</text><text x=\"240\" y=\"130\">the record</text></g>\n<line x1=\"130\" y1=\"119\" x2=\"172\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".5\" marker-end=\"url(#ar3)\"/>\n<path d=\"M306 108 L348 60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".4\" marker-end=\"url(#ar3)\"/>\n<rect x=\"352\" y=\"36\" width=\"150\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".4\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".6\" text-anchor=\"middle\">\n<text x=\"427\" y=\"55\">Central spreadsheet</text><text x=\"427\" y=\"70\">nobody owns</text></g>\n<line x1=\"504\" y1=\"59\" x2=\"534\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".4\"/>\n<g stroke=\"currentColor\" stroke-width=\"1.4\" opacity=\".5\"><line x1=\"540\" y1=\"51\" x2=\"556\" y2=\"67\"/><line x1=\"556\" y1=\"51\" x2=\"540\" y2=\"67\"/></g>\n<text x=\"576\" y=\"63\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.3\" fill=\"currentColor\" opacity=\".5\">DEAD END — SAME ERROR RECURS</text>\n<path d=\"M306 130 L348 178\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar3a)\"/>\n<rect x=\"352\" y=\"154\" width=\"188\" height=\"52\" rx=\"8\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" text-anchor=\"middle\">\n<text x=\"446\" y=\"176\">Routed to the responsible</text><text x=\"446\" y=\"192\">team, record attached</text></g>\n<path d=\"M446 208 C446 258 64 258 64 146\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar3a)\"/>\n<text x=\"255\" y=\"253\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.3\" fill=\"#4FD1FF\" text-anchor=\"middle\">CORRECTED AT SOURCE</text>\n<text x=\"560\" y=\"176\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#4FD1FF\">76%</text>\n<text x=\"560\" y=\"194\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"10.5\" fill=\"currentColor\" opacity=\".7\">of reported errors</text>\n<text x=\"560\" y=\"208\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"10.5\" fill=\"currentColor\" opacity=\".7\">resolved</text>\n</svg>", "cap": "Routing an error back to its source with the record attached turned a complaint channel into a correction loop."}, "agent": {"svg": "<svg viewBox=\"0 0 760 320\" role=\"img\" aria-label=\"A plain-English question is translated into typed filter parameters, checked against a scope gate, then answered only from a tool call to the platform API; an upstream failure is reported rather than guessed\" style=\"width:100%;height:auto\">\n<defs><marker id=\"ar4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\"/></marker>\n<marker id=\"ar4a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#4FD1FF\"/></marker></defs>\n\n<text x=\"0\" y=\"16\" font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" letter-spacing=\"1.6\" fill=\"currentColor\" opacity=\".55\">THE MODEL NEVER TOUCHES THE DATA</text>\n\n<rect x=\"0\" y=\"40\" width=\"176\" height=\"54\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".5\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".8\" text-anchor=\"middle\">\n<text x=\"88\" y=\"62\">&#8220;Marriott, Middle East,</text><text x=\"88\" y=\"78\">Q1 2026, in USD?&#8221;</text></g>\n<text x=\"88\" y=\"110\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" letter-spacing=\"1.2\" fill=\"currentColor\" opacity=\".5\" text-anchor=\"middle\">PLAIN ENGLISH</text>\n\n<line x1=\"178\" y1=\"67\" x2=\"214\" y2=\"67\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar4a)\"/>\n\n<rect x=\"218\" y=\"26\" width=\"190\" height=\"82\" rx=\"8\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\"/>\n<text x=\"313\" y=\"46\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" letter-spacing=\"1.3\" fill=\"#4FD1FF\" text-anchor=\"middle\">TRANSLATE, DO NOT CALCULATE</text>\n<g font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" fill=\"currentColor\" opacity=\".85\">\n<text x=\"232\" y=\"64\">chain = Marriott</text><text x=\"232\" y=\"79\">region = Middle East</text>\n<text x=\"232\" y=\"94\">dates = 2026-01-01 &#8594; 03-31</text></g>\n\n<line x1=\"410\" y1=\"67\" x2=\"446\" y2=\"67\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar4a)\"/>\n\n<rect x=\"450\" y=\"40\" width=\"150\" height=\"54\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".55\"/>\n<g font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".85\" text-anchor=\"middle\">\n<text x=\"525\" y=\"62\">Scope gate</text></g>\n<text x=\"525\" y=\"80\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1\" fill=\"currentColor\" opacity=\".6\" text-anchor=\"middle\">PII · FORECASTS · REFUSED</text>\n\n<line x1=\"602\" y1=\"67\" x2=\"638\" y2=\"67\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar4a)\"/>\n<rect x=\"642\" y=\"40\" width=\"118\" height=\"54\" rx=\"8\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\"/>\n<text x=\"701\" y=\"62\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" text-anchor=\"middle\">One typed tool</text>\n<text x=\"701\" y=\"80\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1\" fill=\"#4FD1FF\" text-anchor=\"middle\">9 PARAMS &#183; 2 REQUIRED</text>\n\n<path d=\"M701 96 C701 130 560 130 560 152\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar4a)\"/>\n\n<line x1=\"0\" y1=\"136\" x2=\"760\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".14\"/>\n\n<rect x=\"470\" y=\"152\" width=\"180\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".55\"/>\n<text x=\"560\" y=\"172\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".85\" text-anchor=\"middle\">Pulse Revenue Insights API</text>\n<text x=\"560\" y=\"188\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1\" fill=\"currentColor\" opacity=\".55\" text-anchor=\"middle\">SAME SOURCE AS THE DASHBOARD</text>\n\n<path d=\"M470 175 L300 175\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\" marker-end=\"url(#ar4a)\"/>\n<rect x=\"120\" y=\"150\" width=\"176\" height=\"50\" rx=\"8\" fill=\"none\" stroke=\"#4FD1FF\" stroke-width=\"1.2\"/>\n<text x=\"208\" y=\"170\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" text-anchor=\"middle\">Answer, grounded</text>\n<text x=\"208\" y=\"188\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1\" fill=\"#4FD1FF\" text-anchor=\"middle\">EVERY FIGURE FROM THE TOOL</text>\n\n<path d=\"M560 200 L560 238\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\".5\" marker-end=\"url(#ar4)\"/>\n<text x=\"572\" y=\"222\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1.1\" fill=\"currentColor\" opacity=\".55\">TOOL FAILS</text>\n<rect x=\"380\" y=\"240\" width=\"270\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\".5\"/>\n<text x=\"515\" y=\"260\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"11.5\" fill=\"currentColor\" opacity=\".85\" text-anchor=\"middle\">Names the failure, gives the recovery step</text>\n<text x=\"515\" y=\"276\" font-family=\"IBM Plex Mono, monospace\" font-size=\"8.5\" letter-spacing=\"1\" fill=\"currentColor\" opacity=\".55\" text-anchor=\"middle\">NO NUMBER IS INVENTED</text>\n\n<text x=\"0\" y=\"262\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#4FD1FF\">5 / 5 filters resolved</text>\n<text x=\"0\" y=\"280\" font-family=\"Helvetica Neue, Arial, sans-serif\" font-size=\"10.5\" fill=\"currentColor\" opacity=\".7\">from one sentence, in 5.8s end to end</text>\n<text x=\"0\" y=\"308\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9.5\" letter-spacing=\"1.3\" fill=\"currentColor\" opacity=\".45\">CONSTRAIN THE MODEL TO TRANSLATION AND THE ANSWER STAYS CHECKABLE</text>\n</svg>", "cap": "The model translates the question into filter parameters; every figure in the answer comes back from the same API the dashboard reads."}};
+const SHOTS={"revenue": "assets/shot-revenue.webp", "parity": "assets/shot-parity.webp", "campaign": "assets/shot-campaign.webp", "market": "assets/shot-market.webp", "compset": "assets/shot-compset.webp", "ari": "assets/shot-ari.webp"};
+
+const CASES=[
+{cat:'platform',cl:'Platform · 0→1',org:'iOL',t:'A data platform, blank page to five enterprise accounts',sub:'Seven modules, one data model, sole PM — the 0→1 that had to survive contact with enterprise procurement',shot:'revenue',
+ metrics:[{v:'5+',l:'enterprise accounts'},{v:'~10%',l:'added to pipeline'},{v:'7',l:'modules shipped'}],
+ meta:{Role:'Product Manager · sole PM',Team:'12 eng · 2 UX · 1 data',Period:'2025 — present',Scope:'B2B SaaS platform, 0→1'},
+ ctx:'iOL sells distribution software to large hospitality groups. The commercial team kept losing enterprise deals at the same moment — the buyer would ask what their own data actually told them, and the answer was a folder of exports. There was no analytics product, no warehouse, no shared definition of the core entities, and a sales team already quoting dates.',
+ p:'The customer\'s operating teams ran daily commercial decisions out of spreadsheets rebuilt every Monday. Three source systems, three grains, three refresh cadences. Two sites inside the same group could act on contradictory numbers on the same morning and neither could tell which was wrong. The cost was not analyst hours — it was that nobody trusted a number enough to move quickly on it, so decisions lagged the market by days. That is a generic enterprise-data failure; the vertical just changes the nouns.',
+ cons:'No warehouse, no data team, one engineering squad, and a hard requirement to demo something real to a signed prospect in ten weeks. I could not change the upstream systems — whatever they emitted was what I had to model around. And enterprise procurement meant the first release had to satisfy security review, not just a user.',
+ a:'I refused to start with a dashboard. Four weeks of discovery sat with the operators doing the manual version, because the spreadsheet somebody builds for themselves is the real specification — including the parts they are embarrassed by. That produced a map of the weekly decision cycle rather than an org chart, and I cut the platform along that map.\n\nThe decision that mattered most was defining one shared grain and one metric dictionary before any screen was designed, signed off jointly with finance. This cost roughly three weeks of visible progress and I had to defend it against a sales team that wanted pixels. It was right: every module built afterwards inherited the model instead of re-deriving it, and we never had the "these two screens disagree" conversation that quietly kills analytics adoption.\n\nThe second was sequencing. Rather than partial versions of three modules, each release closed one decision loop end to end. The modules that demoed best were deliberately deferred behind the ones that made the daily job faster — a real tradeoff, and it cost me some sales-team goodwill in month two that the renewal conversations later repaid.',
+ ship:'PRD-led, with the manual baseline recorded before each module started so every release was measured against the process it replaced rather than against itself. All modules share one filter spine, so an answer found in one survives the jump to the next. By the third account, onboarding had gone from a bespoke engagement to a configuration exercise.',
+ r:'5+ enterprise accounts onboarded and roughly 10% added to the revenue pipeline within six months of first release. The platform moved from a line in the deck to the reason the deck gets a second meeting.',
+ learn:'I under-invested in the configuration layer early. Account-specific taxonomies were handled as one-off mappings for the first two customers and cost the team about three weeks of rework when the third arrived. I would now build the configuration model in parallel with the first module, not after the second.',
+ how:'Accounts signed and modules shipped are countable facts from the platform itself. The pipeline figure is finance\'s attribution of deals where Pulse was part of the evaluation, not my own estimate. Absolute contract values are commercially confidential and deliberately not shown here — I can walk through the underlying board in an interview.',
+ s:['0→1 product','Customer discovery','Data modelling','Metric dictionary','Enterprise onboarding','PRD-led delivery','Roadmap sequencing']},
+
+{cat:'ai',cl:'AI · LLM in production',org:'iOL',t:'Generated analysis, with guardrails',sub:'Four indices, a benchmarked funnel, and an LLM read-out constrained so it cannot be confidently wrong',shot:'compset',
+ metrics:[{v:'−40%',l:'decision cycle time'},{v:'50+',l:'sources per market'},{v:'0',l:'free generation over raw data'}],
+ meta:{Role:'Product Manager',Team:'4 eng · 1 data science',Period:'2025 — 26',Scope:'AI-assisted analytics'},
+ ctx:'A competitive benchmarking module: it scores an account against a peer set on demand share, conversion, price position and retention, and runs both funnels side by side.',
+ p:'Even with the numbers correct and current, turning four indices and a funnel into a position took a trained analyst an afternoon. The people who most needed the read-out were the least equipped to produce it, so the analysis existed and the decision still did not get made. This is the classic last-mile problem in analytics: interpretation, not computation, is the bottleneck.',
+ cons:'The obvious answer — point an LLM at the data and let it write — is also the dangerous one. A generated interpretation that is confidently wrong in a commercial tool is worse than no interpretation, because it will be acted on. Underlying data was scraped and therefore patchy, which makes confident narration riskier still.',
+ a:'I scoped the model deliberately narrowly. The LLM never sees raw data; it interprets over the computed indices only, using constrained templated reasoning, and every statement it makes traces back to an index the user can see on the same screen. A property manager gets "demand capture is soft but conversion is strong — the upside is channel visibility, not price" instead of four numbers and a shrug, and can check each clause against the number beside it.\n\nThat was a real tradeoff and I argued for it against a more impressive alternative. Free generation over the raw data demos far better and would have been faster to build. It is also unfalsifiable by the user, which in a tool that drives pricing decisions is a liability, not a feature. I would only take the harder version with the things I did not yet have: a labelled eval set, a measured hallucination rate per claim type, and a correction signal from users — without those, generating over raw data is a bet you cannot audit.\n\nThe second guardrail: indices are suppressed rather than shown when input coverage drops below threshold. A missing index is honest; a thin one is not, and a thin index is exactly what an LLM will happily narrate over.',
+ ship:'Shipped with coverage thresholds configurable per market, and the read-out visually attached to the indices it derives from rather than presented as a standalone summary. The failure mode I designed against is a confident wrong read-out priced into a live rate: every claim stays checkable against a number on the same screen, so a user can catch it, and the account team — not the model — remains accountable for the decision.',
+ r:'Decision cycle time cut by roughly 40% — the gain came from removing the analyst from routine positioning calls, not from faster analysis.',
+ learn:'We capture nothing when a user disagrees with the generated read-out. That correction is the highest-value training signal in the product and we are throwing it away; a one-click "this reads wrong" would have compounded.',
+ how:'Decision cycle time is elapsed time from question raised to decision recorded, on the same weekly workflow with the same team, measured before and after the module landed. The source count is the platform\'s own ingestion list, not an estimate. The zero is structural: the read-out is generated only over pre-computed indices, so free generation over raw data is not a path that exists.',
+ s:['LLM productisation','Guardrail design','Traceable AI output','Index modelling','Data quality thresholds']},
+
+{cat:'ai',cl:'AI · Alerting',org:'iOL',t:'The alert threshold is the product',sub:'Precision versus recall, decided as a product call rather than a modelling one',shot:'market',
+ metrics:[{v:'24–48 hrs',l:'of lead time'},{v:'Precision',l:'chosen over coverage'},{v:'Routed',l:'not broadcast'}],
+ meta:{Role:'Product Manager',Team:'3 eng · 1 data science',Period:'2025 — 26',Scope:'Signal & alerting'},
+ ctx:'A leading-indicator module: it reads demand signal ahead of transactions, with events and holidays overlaid, and alerts commercial teams when something is moving.',
+ p:'The trailing indicator everyone watched only moved after the window to act had closed. The information existed upstream, but nowhere near the decision, and by the time it surfaced the team was reacting rather than pricing.',
+ cons:'The signal is high-volume and noisy. The module\'s entire value depends on alert quality, and alert quality is not a model metric — a channel that fires on routine fluctuation gets muted in week one, and a muted channel is worth nothing regardless of how accurate the model behind it is.',
+ a:'I treated the threshold as the central product decision and made it explicitly, with the tradeoff written down. Set it low and you catch every real shift while generating enough false alarms that people stop opening the alerts. Set it high and precision is excellent but you miss the movements that justify the product.\n\nI biased hard toward precision and shipped at a threshold that surfaced meaningfully fewer alerts than the model could support — knowingly accepting missed signals in exchange for a channel people were still opening in week three. Data science pushed for the higher-recall setting and the argument was a good one; I overrode it because the failure mode is asymmetric. A missed alert costs one opportunity. A muted channel costs every future alert.\n\nAlerts route by market and account rather than broadcasting, and per-user volume was capped in the first release for the same reason.',
+ ship:'Launched to the most signal-sensitive segment first, with alert volume monitored as a health metric alongside accuracy — because the thing that kills an alerting product is not being wrong, it is being ignorable.',
+ r:'Demand-shift alerts surfaced 24–48 hours ahead of the transaction curve — enough lead time to act before the market repriced.',
+ learn:'Per-user threshold control should have been in v1. Tolerance for false alarms genuinely differs between a group director and a single-site manager, and one global setting served neither well.',
+ how:'Lead time is measured against the timestamp at which the same rate movement would have surfaced in the previous weekly review cycle. Precision was tracked by manually reviewing every alert raised in the first weeks and marking whether it was acted on — a product measure rather than a model metric, which is the point.',
+ s:['Alert design','Precision/recall tradeoffs','Signal processing','Event tagging','Routing model','Adoption metrics']},
+
+{cat:'ai',cl:'AI · Agents & tool use',org:'iOL',t:'A natural-language layer over the platform',sub:'A function-calling agent that answers commercial questions in plain English — and refuses, rather than guesses, when it cannot',shot:null,dia:'agent',
+ metrics:[{v:'5/5',l:'filters resolved from one sentence'},{v:'0',l:'figures the model produces itself'},{v:'5.8s',l:'end to end, measured'}],
+ meta:{Role:'Product Manager · AI',Team:'Built by me, then handed to eng',Period:'2026',Scope:'Agentic interface on live platform data'},
+ ctx:'Revenue Insights answers a question the user first has to construct: pick chain, brand, city, date range and currency, then read five KPI cards. Analysts do that fluently. The general managers and commercial directors who actually own the number do not — they ask an analyst, and the answer arrives the next day. I wanted to find out whether the filter UI was the product or just the current interface to it.',
+ p:'The gap is not data availability, it is query construction. Almost every question a commercial lead asks in a meeting maps cleanly onto filters that already exist; the distance between the sentence and the filter state is where the product loses its non-analyst users. And the obvious fix — point a model at the data and let it answer — is the version that produces a confidently wrong number in a revenue meeting, which is worse than shipping nothing.',
+ cons:'It had to sit on the live Revenue Insights API with no new backend, inherit the caller\'s own authentication and permissions rather than a service account, and be built end to end by me as a working prototype so it could be judged before an engineering squad was committed to it. And any sentence with a figure in it would be read as authoritative by whoever saw it.',
+ a:'The decision that defines the whole thing: the model never touches the data. It is a function-calling agent whose only capability is one typed tool — nine parameters, two of them required — so every figure in an answer comes back from the same API the dashboard reads. The model translates a question into a filter state and phrases the result; it does not compute. That is the guardrail, and it is structural rather than instructional: there is no path by which it can produce a number the platform would not itself show.\n\nSecond, ambiguity is resolved deterministically rather than creatively. Date language — “last month”, “QTD”, “Q1 2026” — is mapped to explicit date rules in the system prompt instead of being left to the model, because a quarter boundary that quietly drifts is a wrong answer nobody catches. Entity vocabulary is pinned to the platform\'s own hierarchy — chain, brand, hotel, city, country, region — so a name resolves to the parameter the API actually expects rather than to the nearest-sounding one.\n\nThird, I wrote the out-of-scope list before the in-scope one. Guest PII, forecasts, competitor pricing and the other Pulse modules are refused explicitly, and where a filter is missing the agent asks one clarifying question instead of assuming a default. I capped it at ten tool iterations so a confused run terminates instead of spiralling, left source attribution switched on, and deliberately kept it as an assistive layer beside the dashboard rather than a replacement for it — so every answer stays checkable against a screen a metre away.',
+ ship:'Built as a working prototype with the Pulse REST API registered as a typed tool, and exercised against real filter combinations before any engineering time was requested for it.',
+ r:'On a five-filter question asked in plain English — chain, region, quarter and currency in one sentence — the agent resolved all five parameters correctly and called the tool with the exact date range, in 5.8 seconds end to end. In a run where the upstream API returned an authentication error, it named the failure and gave the user the recovery step instead of producing a plausible number. That second behaviour is the one the design exists for.',
+ how:'Both figures are read off a live agent trace — parameters resolved, tool payload, latency and token count — rather than estimated. The failure behaviour was observed on a real upstream 401, not simulated. This is a prototype under evaluation, not a shipped module, and I describe it that way.',
+ learn:'The prototype has no offline evaluation set. I validated it by hand against filter combinations I chose, which only tests the cases I thought of. Before it goes near real users I would fix a question set with expected parameter output, score parameter accuracy as a regression check on every prompt change, and log refusals separately from failures. Right now I can demonstrate that the guardrail works; I cannot yet tell you how often it fires, and that is the gap I would close first.',
+ s:['LLM agents','Function calling','Tool contract design','Prompt design','Guardrails & scope control','Evaluation planning','Rapid prototyping']},
+
+{cat:'growth',cl:'Growth · Activation',org:'Df-OS',t:'Instrument first, then argue',sub:'Two quarters of onboarding debate ended by measurement — and the consensus turned out to be wrong',shot:null,dia:'onboarding',
+ metrics:[{v:'−25%',l:'drop-off'},{v:'+28%',l:'engagement'},{v:'6',l:'steps re-sequenced'}],
+ meta:{Role:'Product Manager',Team:'5 eng · 1 UX · 1 QA',Period:'2023 — 24',Scope:'Activation funnel'},
+ ctx:'Df-OS (formerly DesignX) is an industrial B2B SaaS platform — a digital operating system for manufacturing sites. A new customer\'s first week decides whether the deployment succeeds: if a site does not connect its data and produce a first report, the account stalls.',
+ p:'Users were dropping out of onboarding before reaching first value, and the flow had never been instrumented end to end. Every theory about which step was killing it was anecdote, and each proposed fix cost a sprint to disprove. The same three hypotheses had been circulating for two quarters.',
+ cons:'Onboarding included compliance-relevant identity steps that could not simply be deleted, and the sequence had been designed by a founder — which made it politically as well as technically load-bearing.',
+ a:'I made instrumentation the first deliverable and refused to ship any fix until it landed. That was unpopular: a sprint with no user-visible change, in a quarter with an adoption target. But it converted the argument from opinion into an ordered list, with every drop sized by users lost rather than by how strongly someone felt.\n\nThe data contradicted the team consensus. The step everyone blamed was not the largest loss. A duplicated identity screen — collecting documents the user had already provided — was, and a company-profile step sitting before first value was second. I cut the duplicate and deferred the profile to after activation.\n\nI then ran A/B tests on the two remaining high-loss steps rather than redesigning the whole flow at once. Slower, and it meant living with a known-bad step for another cycle, but a full redesign would have made every gain unattributable — and unattributable gains cannot be defended or repeated.',
+ ship:'Six weeks of sequential experiments with the legacy flow held as control, so each intervention carried its own measured lift.',
+ r:'Onboarding drop-offs down 25% and engagement up 28%, with each contributing change individually attributed rather than claimed in aggregate.',
+ learn:'I treated instrumentation as a project rather than a standard. It should have become a definition-of-done for every flow the team shipped afterwards; instead the next two features launched uninstrumented and we replayed a smaller version of the same argument.',
+ how:'Funnel measured in Mixpanel over matched windows either side of each change, on the same acquisition mix. The two largest drops were tested separately against the legacy flow held as control, so −25% is attributed to specific changes rather than to the quarter.',
+ s:['Funnel instrumentation','A/B testing','Experiment design','Mixpanel','Activation','Stakeholder management']},
+
+{cat:'growth',cl:'Growth · Commercial',org:'Df-OS',t:'Ranking the roadmap by users lost',sub:'One reframe ended the prioritisation argument and moved conversion, adoption and revenue',shot:null,dia:'reframe',
+ metrics:[{v:'+18%',l:'conversion'},{v:'+30%',l:'first-week adoption'},{v:'+20%',l:'annual revenue'}],
+ meta:{Role:'Product Manager',Team:'Multi-squad',Period:'2023 — 25',Scope:'Roadmap, growth & GTM'},
+ ctx:'Owning the multi-module roadmap for an industrial B2B SaaS platform, with quarterly OKRs tied to adoption and revenue.',
+ p:'Conversion was flat and every function had a favourite explanation. Roadmap capacity was effectively being allocated to whoever argued most persuasively in planning, which produced a great deal of motion and very little measured movement. The underlying problem was not analytical — it was that no shared basis existed for saying one thing mattered more than another.',
+ cons:'Analytics coverage was partial and the data team was shared across three products, so I did the analysis myself in SQL rather than requisitioning it — which also meant I had to make the method legible enough that other functions would accept the conclusions.',
+ a:'I reframed the question from "which experience is worst" to "which loses the most users", and sized every friction point accordingly. That one change ended the debate, because the ranking stopped being a matter of taste. Engineering and UX then worked the list in order, and I published the working so anyone could challenge the numbers rather than the conclusion.\n\nIn parallel I ran GTM for new module launches, aligning messaging to the segments the analytics said actually converted rather than the segments sales found most exciting. I lost part of that argument — we kept one broad campaign — but the segmented launches measurably outperformed it, and that evidence changed how the next three were planned.',
+ ship:'Quarterly OKRs re-cut around the ordered list, with adoption instrumented per module so a launch could be judged in two weeks rather than at quarter end.',
+ r:'Conversion up 18%; new modules launched with 30% higher first-week adoption; 100+ features delivered across the roadmap, lifting overall adoption 35% YoY and annual revenue 20%.',
+ learn:'I over-indexed on acquisition friction and under-invested in retention. Conversion improved while a slower churn problem went unexamined for two quarters, and the compounding cost of that was probably larger than the gain I was celebrating.',
+ how:'Conversion and first-week adoption come from product analytics over equal pre- and post-windows. The +20% is the finance-reported annual figure for the accounts on that roadmap — reported to me, not computed by me, and I would flag it as the softest number on this page.',
+ s:['SQL','Mixpanel','Funnel analysis','Prioritisation','OKR design','GTM strategy','Segmentation']},
+
+{cat:'ops',cl:'Operations · Scale',org:'YCSPL',t:'45 lakh records, 82 towns, 40+ teams',sub:'Where I learned that fixing what an operation reports beats making it work harder',shot:null,dia:'loop',
+ metrics:[{v:'45L+',l:'records digitised'},{v:'84%',l:'in 35 towns, early'},{v:'76%',l:'of errors resolved'}],
+ meta:{Role:'Business Analyst',Team:'40+ field teams',Period:'2021 — 22',Scope:'Data operations at state scale'},
+ ctx:'A government programme digitising property records across an Indian state, where tax compliance depended on records that existed only on paper. My first exposure to owning an outcome across an organisation I did not manage.',
+ p:'Nothing could be queried, so nobody could distinguish a collection gap from a records gap. Field teams worked without a shared definition of done, and errors reported from the field disappeared into a central spreadsheet that nobody owned — which meant the same mistakes recurred and the people making them never found out.',
+ cons:'Forty-plus teams across 82 towns with wide variance in equipment, connectivity and training, a fixed government deadline, and no authority over any of the teams. Everything had to work by making the right thing easier rather than by mandate.',
+ a:'I built the workflow around defined handoffs and a tracked state per record, so progress was measurable per town rather than per team\'s self-report — which removed the incentive to report optimistically.\n\nThe change that mattered most was routing field-reported errors back to the responsible team with the record attached, instead of into a central list. That turned error reporting from a complaint channel into a correction loop, and adoption of it was voluntary and near-total, because it made the reporter\'s own next visit easier.\n\nI then used SQL and basic statistical analysis to find which towns were slowing and why. It surfaced that the bottleneck in three of the five worst-performing towns was equipment distribution, not team performance — which had been the assumption. Reallocating hardware is most of where the schedule gain actually came from.',
+ ship:'Rolled town by town, with the workflow refined between waves rather than fixed up front.',
+ r:'84% digitisation across 35 towns ahead of schedule, and 76% of reported errors resolved through the feedback loop.',
+ learn:'I spent too long persuading teams that the tracked workflow was fair before showing them it made their reporting burden smaller. Leading with the benefit to them rather than the integrity of the data would have shortened adoption by weeks.',
+ how:'Digitisation percentage is a count against the known record base per town, taken from the tracked workflow rather than from team self-report — removing self-report was the intervention. Error resolution is the closed share of errors raised through the loop, over the programme window.',
+ s:['Data operations','Workflow design','SQL','Statistical analysis','Programme management','Influence without authority']}
+];
+
+
+const LOGO={"iOL": "assets/logo-iol.webp", "Df-OS": "assets/logo-dfos.webp", "YCSPL": "assets/logo-ycspl.webp"};
+const wg=$('#wgrid');
+wg.innerHTML=CASES.map((c,i)=>`
+  <button class="wc rv${i===0?' feat':''}" data-cat="${c.cat}" data-i="${i}" style="--dl:${Math.min(i*.03,.2)}s">
+    ${c.shot?`<span class="wc-shot"><img src="${SHOTS[c.shot]}" alt="${c.t} in iOL Pulse" loading="lazy"><span class="tagl">Live product · figures blurred</span></span>`:(c.dia?`<span class="wc-dia">${DIA[c.dia].svg}</span>`:'')}
+    <span class="wc-b">
+      <span class="wc-top"><span class="mark"><img src="${LOGO[c.org]}" alt="${c.org}"></span><span class="wc-org">${c.org} · ${c.cl}</span></span>
+      <h3 class="h3">${c.t}</h3>
+      <span class="sb">${c.sub}</span>
+      <span class="wc-mets">${c.metrics.map(m=>`<span class="wc-met"><b>${m.v}</b><span>${m.l}</span></span>`).join('')}</span>
+      <span class="wc-go">Read the full case <em>→</em></span>
+    </span>
+  </button>`).join('');
+
+$$('.filt').forEach(b=>b.addEventListener('click',()=>{
+  $$('.filt').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  const f=b.dataset.f;
+  $$('.wc').forEach(c=>c.classList.toggle('gone',f!=='all'&&c.dataset.cat!==f));
+}));
+
+const mod=$('#mod'); let cur=0;
+const paras=t=>t.split('\n\n').map(x=>`<p>${x}</p>`).join('');
+function openC(i){
+  cur=i; const c=CASES[i];
+  $('#mCat').innerHTML=`<b>${String(i+1).padStart(2,'0')}</b> — ${c.org} · ${c.cl}`;
+  $('#mMark').innerHTML='<img src="'+LOGO[c.org]+'" alt="'+c.org+'">';
+  $('#mTitle').textContent=c.t;
+  $('#mSub').textContent=c.sub;
+  $('#mMeta').innerHTML=Object.entries(c.meta).map(([k,v])=>`<div><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+  $('#mShot').innerHTML=c.shot?`<div class="mshot"><img src="${SHOTS[c.shot]}" alt="${c.t}"><div class="cap">Captured from the live product · revenue, volume and client-market values obscured</div></div>`:(c.dia?`<figure class="mdia">${DIA[c.dia].svg}<figcaption>${DIA[c.dia].cap}</figcaption></figure>`:'');
+  $('#mRow').innerHTML=c.metrics.map(m=>`<div><b>${m.v}</b><span>${m.l}</span></div>`).join('');
+  $('#mCtx').textContent=c.ctx; $('#mP').textContent=c.p; $('#mCons').textContent=c.cons;
+  $('#mA').innerHTML=paras(c.a);
+  $('#mShip').textContent=c.ship; $('#mR').textContent=c.r; $('#mLearn').textContent=c.learn;
+  $('#mHow').textContent=c.how||''; $('#mHowB').style.display=c.how?'':'none';
+  $('#mStack').innerHTML=c.s.map(s=>`<span>${s}</span>`).join('');
+  mod.classList.add('show'); document.body.style.overflow='hidden'; $('#modBox').scrollTop=0;
+}
+function closeC(){mod.classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('click',e=>{
+  const card=e.target.closest('.wc'); if(card){openC(+card.dataset.i);return}
+  if(e.target.closest('[data-close]'))closeC();
+});
+$('#mPrev').addEventListener('click',()=>openC((cur-1+CASES.length)%CASES.length));
+$('#mNext').addEventListener('click',()=>openC((cur+1)%CASES.length));
+document.addEventListener('keydown',e=>{
+  if(!mod.classList.contains('show'))return;
+  if(e.key==='Escape')closeC();
+  if(e.key==='ArrowRight')openC((cur+1)%CASES.length);
+  if(e.key==='ArrowLeft')openC((cur-1+CASES.length)%CASES.length);
+});
+
+
+/* ══ ORGANISATION DETAIL ══ */
+const ORGS=[
+ {org:'iOL',cl:'Enterprise SaaS · AI products',t:'Product Manager',sub:'Sole product manager on iOL Pulse, an enterprise data intelligence platform',
+  meta:{Period:'Sep 2025 — present',Team:'12 eng · 2 UX · 1 data',Location:'Gurugram, India',Reporting:'Founder / CPO'},
+  scope:'Own the platform end to end — strategy, discovery, data model, roadmap, delivery and adoption — as its only product manager. Seven modules spanning revenue analytics, pricing and rate parity, competitive benchmarking, distribution health and demand signals, deployed across enterprise accounts in the Middle East and South Asia.',
+  list:['Took the platform <b>0→1</b>: 5+ enterprise accounts signed and <b>~10% added to revenue pipeline</b> within six months of first release',
+   'Defined the platform data model and metric dictionary with finance <b>before</b> design — all seven modules inherit it, and no two surfaces disagree on a number',
+   'Consolidated three source systems onto one grain in the core analytics module, returning <b>~6 hrs/week per revenue manager</b>',
+   'Modelled rate parity as three states rather than a breach flag, and priced the gap as a 12-month revenue opportunity — turning a compliance chore into a funded workstream',
+   'Shipped LLM-generated analysis constrained to computed indices with full traceability — <b>decision cycle time down ~40%</b>',
+   'Shipped a versioned allocation engine authored by ops without engineering in the loop — <b>100+ rules per client, ~25 hrs/week returned</b>',
+   'Shipped demand-signal alerting at a deliberately high precision threshold — <b>24–48 hrs of lead time</b> on a channel people still open in week three']},
+ {org:'Df-OS',cl:'Industry 4.0 · Manufacturing SaaS',t:'Product Manager',sub:'Full-time PM on Df-OS (formerly DesignX) — multi-module roadmap, activation and conversion',
+  meta:{Period:'Dec 2022 — 20 Sep 2025',Team:'Eng · UX · QA · BAU squads',Location:'Noida, India',Engagement:'Full-time, sole roadmap owner'},
+  scope:'Full-time product manager and sole owner of the roadmap across modules, aligning quarterly OKRs to growth targets and leading cross-functional squads through discovery, delivery and launch for a platform that digitises shop-floor processes end to end. The company was founded as DesignX and rebranded to Df-OS during my tenure — the same role and the same product throughout.',
+  list:['<b>100+ features</b> delivered across the roadmap — adoption <b>+35% YoY</b> and annual revenue <b>+20%</b>',
+   'Rebuilt onboarding on instrumentation and sequential A/B tests — <b>drop-off −25%, engagement +28%</b>, with every change individually attributed',
+   'Reframed prioritisation from "which experience is worst" to "which loses the most users" using SQL and Mixpanel — <b>conversion +18%</b>',
+   'Ran GTM for new module launches against the segments analytics said converted — <b>30% higher first-week adoption</b>',
+   'Introduced Gen AI validation with human review kept on exceptions — <b>manual effort −20%</b> and inter-reviewer variance materially reduced']},
+ {org:'YCSPL',cl:'Public sector · Data operations',t:'Business Analyst',sub:'Workflow and data quality for a state-scale property digitisation programme',
+  meta:{Period:'Sep 2021 — Nov 2022',Team:'40+ field teams',Location:'Gurugram, India',Scope:'82 towns'},
+  scope:'Ran the workflow design and error-correction loop for a government programme digitising property records across an Indian state — field survey operations, GIS mapping and municipal tax-base data, against a fixed deadline and with no authority over the teams delivering it.',
+  list:['<b>45 lakh+ property records</b> digitised across 82 towns, improving tax compliance',
+   '<b>84% coverage across 35 towns ahead of schedule</b>, driven by reallocating equipment after bottleneck analysis rather than by pushing teams harder',
+   'Built the error-correction loop that routed field-reported issues back to the responsible team with the record attached — <b>76% of reported errors resolved</b>',
+   'Used SQL and statistical analysis to show the constraint in the three worst-performing towns was equipment distribution, not team performance']}
+];
+const omod=$('#omod');
+function openO(i){
+  const o=ORGS[i];
+  $('#oMark').innerHTML='<img src="'+LOGO[o.org]+'" alt="'+o.org+'">';
+  $('#oCat').innerHTML=`<b>${o.org}</b> — ${o.cl}`;
+  $('#oTitle').textContent=o.t;
+  $('#oSub').textContent=o.sub;
+  $('#oMeta').innerHTML=Object.entries(o.meta).map(([k,v])=>`<div><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+  $('#oScope').textContent=o.scope;
+  $('#oList').innerHTML=o.list.map(x=>`<li>${x}</li>`).join('');
+  omod.classList.add('show'); document.body.style.overflow='hidden'; $('#omodBox').scrollTop=0;
+}
+function closeO(){omod.classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('click',e=>{
+  const row=e.target.closest('.ocard'); if(row){openO(+row.dataset.org);return}
+  if(e.target.closest('[data-oclose]'))closeO();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&omod.classList.contains('show'))closeO()});
+
+/* marquee */
+const M1=['B2B SaaS','0→1 Platforms','AI Products','Experimentation','Data Platforms','Enterprise Onboarding'];
+const M2=['Discovery','Metric Design','LLM Guardrails','Function Calling','A/B Testing','Roadmap & OKRs','GTM'];
+const row=(a,s)=>`<span>${a.map(t=>t+s).join('')}</span>`;
+$('#mqA').innerHTML=row(M1,'<em>✦</em>').repeat(2);
+$('#mqB').innerHTML=row(M2,'<em>/</em>').repeat(2);
+
+/* chrome */
+const nav=$('#nav'), prog=$('#prog');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('stuck',scrollY>50);
+  const h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(h>0?scrollY/h*100:0)+'%';
+},{passive:true});
+const burger=$('#burger'), nl=$('#nlinks');
+burger.addEventListener('click',()=>{const o=nl.classList.toggle('open');burger.textContent=o?'✕':'☰';burger.setAttribute('aria-expanded',o)});
+nl.addEventListener('click',e=>{if(e.target.tagName==='A'){nl.classList.remove('open');burger.textContent='☰'}});
+
+function countUp(el){
+  const n=+el.dataset.n,pre=el.dataset.pre||'',post=el.dataset.post||'',t0=performance.now();
+  (function step(t){const k=Math.min((t-t0)/1100,1),e=1-Math.pow(1-k,3);
+    el.textContent=pre+Math.round(n*e)+post; if(k<1)requestAnimationFrame(step)})(t0);
+}
+const revs=$$('.rv');
+if(reduce){
+  revs.forEach(r=>r.classList.add('in'));
+  $$('[data-n]').forEach(el=>el.textContent=(el.dataset.pre||'')+el.dataset.n+(el.dataset.post||''));
+}else{
+  const io=new IntersectionObserver((es,o)=>es.forEach(en=>{
+    if(!en.isIntersecting)return;
+    en.target.classList.add('in');
+    $$('[data-n]',en.target).forEach(countUp);
+    o.unobserve(en.target);
+  }),{rootMargin:'0px 0px -6% 0px',threshold:.04});
+  revs.forEach(r=>io.observe(r));
+  setTimeout(()=>revs.forEach(r=>r.classList.add('in')),1800);
+}
+const spy=new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting)return;
+  $$('.nlinks a').forEach(a=>a.classList.toggle('on',a.dataset.s===en.target.id));
+}),{rootMargin:'-40% 0px -54% 0px'});
+['about','work','experience','toolkit','contact'].forEach(id=>{const el=$('#'+id);if(el)spy.observe(el)});
+</script>
+
+
+</body>
+</html>
