@@ -198,8 +198,8 @@ h1,h2,h3,h4{font-weight:800;letter-spacing:-.045em;line-height:1.02;text-wrap:ba
 .pil b{display:block;font-size:17.5px;font-weight:700;letter-spacing:-.028em;margin-bottom:6px}
 .pil p{font-size:14.5px;color:var(--muted);line-height:1.6}
 
-.about2{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,.78fr);gap:clamp(26px,3.4vw,48px);
-  align-items:start;margin:clamp(30px,4vw,48px) 0 clamp(44px,5.5vw,76px)}
+.about2{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.95fr);gap:clamp(26px,3.4vw,48px);
+  align-items:start;margin:0 0 clamp(44px,5.5vw,76px)}
 .glance{border:1px solid var(--line);border-radius:var(--r);background:var(--card);backdrop-filter:blur(16px);overflow:hidden}
 .glance .gr{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline;
   padding:13px 18px;border-bottom:1px solid var(--line)}
@@ -458,6 +458,22 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 .confid b{color:var(--fg-2);font-weight:600}
 @media(max-width:900px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.scale{grid-template-columns:1fr}}
+.wkhd{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:start}
+.legend{border:1px solid var(--line);border-radius:var(--r);background:var(--card);backdrop-filter:blur(16px);
+  padding:clamp(20px,2.2vw,28px)}
+.lg-h{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);
+  display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.lg-h::before{content:"";width:14px;height:1px;background:var(--cyan)}
+.lg-l{list-style:none;counter-reset:lg;margin:0;padding:0}
+.lg-l li{counter-increment:lg;position:relative;padding:9px 0 9px 34px;font-size:14px;line-height:1.5;
+  color:var(--muted);border-top:1px solid var(--line)}
+.lg-l li:first-child{border-top:none;padding-top:0}
+.lg-l li:last-child{padding-bottom:0}
+.lg-l li::before{content:counter(lg,decimal-leading-zero);position:absolute;left:0;top:9px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--cyan);opacity:.75}
+.lg-l li:first-child::before{top:0}
+.lg-l b{color:var(--fg-2);font-weight:600}
+@media(max-width:1080px){.wkhd{grid-template-columns:1fr;gap:30px}}
 </style>
 
 <div class="aur" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -468,7 +484,7 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 
 <div class="shell">
 <nav class="nav" id="nav">
-  <a class="logo" href="#top" aria-label="Himanshu Rana — home">Himanshu&nbsp;Rana<i>.</i></a>
+  <a class="logo" href="#top" aria-label="Himanshu Rana — home">Himanshu&nbsp;Rana</a>
   <div class="nlinks" id="nlinks">
     <a href="#about" data-s="about">About</a>
     <a href="#work" data-s="work">Work</a>
@@ -483,8 +499,8 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 <!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero-in">
-    <div class="badge rv"><i></i>Open to Product Manager · Senior PM · AI PM roles</div>
-    <div class="hero-meta rv" style="--dl:.04s;margin-bottom:clamp(20px,2.6vw,30px)"><span>B2B SaaS</span><span>0→1 &amp; Platform</span><span>LLM agents in production</span><span>Gurugram, IN</span></div>
+    <div class="badge rv"><i></i>Open to roles — Product Manager · Senior PM · AI PM</div>
+    <div class="hero-meta rv" style="--dl:.04s;margin-bottom:clamp(20px,2.6vw,30px)"><span>B2B SaaS</span><span>0→1 &amp; Platform</span><span>AI agents &amp; guardrails</span><span>Measured, not claimed</span></div>
     <h1 class="h1 rv" style="--dl:.08s">I build B2B SaaS<br>people <span class="g">actually decide with</span>.</h1>
     <p class="lede rv" style="--dl:.14s">Five years of product across enterprise data platforms, industrial SaaS and public-sector operations. I take the spreadsheet somebody rebuilds every Monday and replace it with <b>a product they open every morning</b> — discovery first, instrumented on day one, every release closed out with a number.</p>
     <div class="acts rv" style="--dl:.2s">
@@ -518,19 +534,25 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 <section class="sec" id="about">
   <div class="sec-in">
     <div class="eyebrow"><b>01</b> — About</div>
-    <h2 class="h2 rv" style="max-width:19ch">I ship products that move a number, <span class="g">not features that fill a roadmap</span>.</h2>
     <div class="about2">
+      <div>
+      <h2 class="h2 rv" style="max-width:19ch;margin-bottom:clamp(22px,2.4vw,32px)">I ship products that move a number, <span class="g">not features that fill a roadmap</span>.</h2>
       <div class="prose rv" style="--dl:.06s">
         <p>Five years across three very different B2B products — an enterprise data intelligence platform, an industrial operating system for manufacturing plants, and a state-scale public data programme. Different markets, one craft: find where the decision is actually made, work out why people trust their own spreadsheet more than the system, and build the thing that replaces it.</p>
         <p>Most recently I took a platform from a blank page to five signed enterprise accounts as its only PM — defining the data model and metric dictionary with finance before a screen was designed, then shipping seven modules against it. Before that I owned a multi-module roadmap through 100+ features, lifting adoption 35% YoY and annual revenue 20%.</p>
         <p>The AI work is what I care most about now, and I treat it as production judgement rather than a feature label. Three of the seven cases here are AI surfaces: generation constrained to pre-computed indices so a read-out cannot be confidently wrong, an alert threshold set for precision because a muted channel is a dead feature, and an agent whose only capability is one typed tool — it translates a question into a filter state and never computes a figure itself. I care more about where the guardrail sits than about which model is behind it.</p>
         <p>I write case studies the way I would defend a decision in review — the constraint, the option I rejected, the tradeoff I accepted, the number it moved, and what I would do differently.</p>
       </div>
+      </div>
       <div>
         <div class="port rv" style="--dl:.1s"><img src="assets/portrait.webp" alt="Himanshu Rana">
-          <span class="who"><span><b>Himanshu Rana</b><span>Product Manager</span></span><em>Open to roles</em></span></div>
+          <span class="who"><span><b>Himanshu Rana</b><span>Product Manager</span></span><em>Gurugram, India</em></span></div>
         <div class="glance rv" style="--dl:.14s">
-          <div class="gr"><span class="gk">Open to</span><span class="gv"><em>Product Manager</em> · Senior PM · AI PM</span></div>
+          <div class="gr"><span class="gk">Now</span><span class="gv"><em>Product Manager</em> · iOL Pulse</span></div>
+          <div class="gr"><span class="gk">Squad</span><span class="gv">12 eng · 2 UX · 1 data</span></div>
+          <div class="gr"><span class="gk">Since</span><span class="gv">Sep 2025</span></div>
+          <div class="gr"><span class="gk">Before</span><span class="gv">Df-OS · YCSPL</span></div>
+          <div class="gr"><span class="gk">Focus</span><span class="gv">Enterprise data · AI surfaces</span></div>
         </div>
       </div>
     </div>
@@ -558,10 +580,27 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 <section class="sec" id="work">
   <div class="sec-in">
     <div class="sec-hd">
+      <div class="wkhd">
+      <div>
       <div class="eyebrow"><b>02</b> — Selected work</div>
       <h2 class="h2 rv">Seven cases, <span class="g">seven numbers</span>.</h2>
       <p class="sub rv" style="--dl:.06s">Four from the platform I own now — including the agent prototype — two from an industrial SaaS roadmap, one from operations at state scale. Open any card for the full case — context, constraints, the option I rejected, the tradeoff I accepted, the measured impact, and what I'd do differently. Product screens are from the live tool with commercial figures blurred.</p>
       <p class="confid rv" style="--dl:.1s"><b>On verifying these numbers.</b> Every case carries a <b>How this was measured</b> note — the instrument, the window and the comparison basis — so you can judge the method rather than take the figure on trust. Percentages are given instead of absolute revenue and volumes because those are commercially confidential; where a number was reported to me rather than computed by me, the note says so. I am happy to walk through the underlying boards, dashboards and PRDs in an interview.</p>
+      </div>
+      <div class="legend rv" style="--dl:.12s">
+        <div class="lg-h">How to read a case</div>
+        <ol class="lg-l">
+          <li><b>Context</b> — the commercial situation</li>
+          <li><b>The problem</b> — what was actually broken, not the symptom</li>
+          <li><b>Constraints</b> — what I could not change</li>
+          <li><b>Approach &amp; key decisions</b> — including the option I rejected and what it cost me</li>
+          <li><b>How it shipped</b></li>
+          <li><b>Impact</b> — the number it moved</li>
+          <li><b>How it was measured</b> — instrument, window, comparison basis</li>
+          <li><b>What I'd do differently</b></li>
+        </ol>
+      </div>
+      </div>
     </div>
     <div class="filters rv">
       <button class="filt on" data-f="all">All work</button>
