@@ -1,9 +1,13 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+/Himanshu-Rana-Resume.pdf
+  Cache-Control: public, max-age=3600
+  Content-Disposition: attachment; filename="Himanshu-Rana-Resume.pdf"
+
 /Himanshu-Rana-CV.pdf
   Cache-Control: public, max-age=3600
-  Content-Disposition: attachment; filename="Himanshu-Rana-CV.pdf"
+  Content-Disposition: attachment; filename="Himanshu-Rana-Resume.pdf"
 
 /*
   X-Content-Type-Options: nosniff
