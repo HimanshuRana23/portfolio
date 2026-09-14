@@ -477,6 +477,26 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 .lg-l li:first-child::before{top:0}
 .lg-l b{color:var(--fg-2);font-weight:600}
 @media(max-width:1080px){.wkhd{grid-template-columns:1fr;gap:30px}}
+.hero2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);
+  gap:clamp(30px,4vw,64px);align-items:end;margin-top:clamp(20px,2.4vw,30px)}
+.hstats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.hstats>div{background:rgba(255,255,255,.022);padding:18px 20px 16px}
+.hstats b{display:block;font-size:clamp(24px,2.3vw,30px);font-weight:800;letter-spacing:-.03em;
+  line-height:1;color:var(--cyan)}
+.hstats span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-top:9px;line-height:1.4}
+@media(max-width:1080px){
+  .hero2{grid-template-columns:1fr;align-items:start;gap:28px}
+  .hstats{max-width:420px}
+}
+@media(max-width:520px){.hstats{grid-template-columns:1fr}}
+.chead{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:end}
+.chead .cbig{margin-bottom:0}
+.chead .lede{padding-bottom:10px}
+.kits{align-items:start}
+@media(max-width:960px){.chead{grid-template-columns:1fr;gap:22px;align-items:start}
+  .chead .cbig{margin-bottom:4px}}
 </style>
 
 <div class="aur" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -495,7 +515,7 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
     <a href="#toolkit" data-s="toolkit">Toolkit</a>
     <a href="#contact" data-s="contact">Contact</a>
   </div>
-  <a class="talk" href="mailto:himanshuranaa23@gmail.com">Let's talk</a>
+  <a class="talk" href="Himanshu-Rana-Resume.pdf" download>Download Resume</a>
   <button class="burger" id="burger" aria-expanded="false">☰</button>
 </nav>
 
@@ -505,12 +525,22 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
     <div class="badge rv"><i></i>Open to roles — Product Manager · Senior PM · AI PM</div>
     <div class="hero-meta rv" style="--dl:.04s;margin-bottom:clamp(20px,2.6vw,30px)"><span>B2B SaaS</span><span>0→1 &amp; Platform</span><span>AI agents &amp; guardrails</span><span>Measured, not claimed</span></div>
     <h1 class="h1 rv" style="--dl:.08s">I build B2B SaaS products that<br><span class="g">drive better business decisions</span>.</h1>
+    <div class="hero2">
+    <div>
     <p class="lede rv" style="--dl:.14s">Five years of product across enterprise data platforms, industrial SaaS and public-sector operations. My job is usually the same one. Somebody rebuilds a spreadsheet every Monday because they do not trust the system, and I have to build the thing they trust instead. I start with discovery, instrument it on day one, and close every release out with a number.</p>
     <div class="acts rv" style="--dl:.2s">
       <a class="btn pri" href="#work">See the work →</a>
       <a class="btn" href="Himanshu-Rana-Resume.pdf" download>Download resume ↓</a>
       <a class="btn" href="mailto:himanshuranaa23@gmail.com">Email me</a>
       <a class="btn" href="https://www.linkedin.com/in/himanshurana23" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    </div>
+    <div class="hstats rv" style="--dl:.24s">
+      <div><b>4+</b><span>Years in product</span></div>
+      <div><b>2</b><span>Products 0&#8594;1</span></div>
+      <div><b>100+</b><span>Features shipped</span></div>
+      <div><b>+20%</b><span>Annual revenue</span></div>
+    </div>
     </div>
   </div>
 </header>
@@ -682,7 +712,8 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
         <span>Metric dictionaries</span><span>Data modelling</span><span>Dashboard design</span><span>GIS tooling</span></div></div>
       <div class="kit"><h4><i>✦</i>AI &amp; Gen AI</h4><div class="tags">
         <span>Gen AI product management</span><span>AI/ML product management</span><span>LLM workflows</span>
-        <span>Automated event tagging</span><span>Human-in-the-loop</span><span>Threshold &amp; guardrail design</span></div></div>
+        <span>Automated event tagging</span><span>Human-in-the-loop</span><span>Threshold &amp; guardrail design</span>
+        <span>Function calling</span><span>Agent tool contracts</span><span>Evaluation sets</span></div></div>
       <div class="kit"><h4><i>◎</i>Domains shipped in</h4><div class="tags">
         <span>Enterprise data platforms</span><span>Industrial &amp; manufacturing SaaS</span><span>Revenue &amp; pricing systems</span>
         <span>Distribution &amp; channel ops</span><span>Public-sector data</span><span>Multi-tenant B2B</span></div></div>
@@ -694,13 +725,15 @@ footer{padding:24px var(--pad) 34px;border-top:1px solid var(--line);display:fle
 <section class="contact" id="contact">
   <div class="sec-in">
     <div class="eyebrow"><b>05</b> — Contact</div>
+    <div class="chead">
     <h2 class="cbig rv" style="--dl:.04s">Let's <span class="g">talk</span>.</h2>
     <p class="lede rv" style="--dl:.1s">Open to product roles and to interesting conversations. 0→1 builds, data platforms, AI inside a workflow, and anything where the current answer is a spreadsheet somebody rebuilds every Monday.</p>
+    </div>
     <div class="clinks rv" style="--dl:.16s">
       <a class="cl" href="mailto:himanshuranaa23@gmail.com"><div class="k">Email</div><div class="v">himanshuranaa23@gmail.com</div></a>
       <a class="cl" href="tel:+919990303798"><div class="k">Phone</div><div class="v">+91 99903 03798</div></a>
       <a class="cl" href="https://www.linkedin.com/in/himanshurana23" target="_blank" rel="noopener"><div class="k">LinkedIn</div><div class="v">/in/himanshurana23 ↗</div></a>
-      <a class="cl" href="Himanshu-Rana-Resume.pdf" download><div class="k">Resume</div><div class="v">Himanshu-Rana-Resume.pdf ↓</div></a>
+      <a class="cl" href="Himanshu-Rana-Resume.pdf" download><div class="k">Resume</div><div class="v">Download Resume ↓</div></a>
       <div class="cl"><div class="k">Based in</div><div class="v">Gurugram, Haryana</div></div>
     </div>
   </div>
